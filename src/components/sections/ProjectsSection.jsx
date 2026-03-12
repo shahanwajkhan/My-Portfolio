@@ -33,7 +33,7 @@ const ProjectsSection = () => {
             tech: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Python', 'Flask', 'Gemini API'],
             categories: ['AI Projects', 'Full Stack'],
             github: 'https://github.com/shahanwajkhan',
-            demo: '#',
+            demo: 'https://dev-orbit-orcin.vercel.app/',
             image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop'
         },
         {
