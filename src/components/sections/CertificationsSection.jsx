@@ -71,31 +71,12 @@ const CertificationsSection = () => {
 
     return (
         <section id="certifications" className="py-24 relative overflow-hidden text-gray-100 border-t border-white/5">
-            {/* Static Background elements */}
+            {/* Simplified Background element */}
             <div
-                className="absolute top-0 right-0 w-[500px] h-[500px] bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.15000000000000002)_0%,_transparent_70%)] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none"
+                className="absolute top-0 right-0 w-[400px] h-[400px] bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.08)_0%,_transparent_70%)] rounded-full -translate-y-1/2 translate-x-1/2 pointer-events-none"
             ></div>
 
-            <div
-                className="absolute bottom-0 left-0 w-[400px] h-[400px] bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.15000000000000002)_0%,_transparent_70%)] rounded-full translate-y-1/2 -translate-x-1/2 pointer-events-none"
-            ></div>
-
-            {/* Subtle static particles */}
-            {particles.map((p) => (
-                <div
-                    key={p.id}
-                    style={{
-                        position: 'absolute',
-                        left: p.left,
-                        top: p.top,
-                        width: p.width,
-                        height: p.height,
-                        borderRadius: '50%',
-                        backgroundColor: 'rgba(255,255,255,0.4)',
-                        pointerEvents: 'none',
-                    }}
-                />
-            ))}
+            {/* Removed particles for performance */}
 
             <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-[1600px]">
                 <motion.div
@@ -138,9 +119,9 @@ const CertificationsSection = () => {
                                 style={{ perspective: 1000 }}
                             >
                                 <motion.div
-                                    whileHover={{ y: -6, scale: 1.03, boxShadow: "0 15px 35px -10px rgba(139, 92, 246, 0.4)" }}
-                                    transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                    className="glass px-5 sm:px-6 py-4 sm:py-5 rounded-2xl border border-white/10 hover:border-secondary/50 transition-all duration-300 relative group flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 shadow-lg bg-gradient-to-r from-white/[0.03] to-transparent overflow-hidden text-center sm:text-left"
+                                    whileHover={{ y: -3, scale: 1.01 }}
+                                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
+                                    className="glass px-5 sm:px-6 py-4 sm:py-5 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all duration-300 relative group flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 shadow-md bg-gradient-to-r from-white/[0.03] to-transparent overflow-hidden text-center sm:text-left will-change-transform"
                                 >
                                     {/* Animated glow on hover */}
                                     <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"></div>
@@ -149,7 +130,7 @@ const CertificationsSection = () => {
                                     <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-secondary to-primary opacity-50 group-hover:opacity-100 group-hover:w-1.5 transition-all duration-300 rounded-l-2xl"></div>
 
                                     {/* Icon */}
-                                    <div className="w-14 h-14 rounded-xl bg-surfaceLight text-secondary flex items-center justify-center border border-white/5 shadow-[0_0_15px_rgba(139,92,246,0.1)] group-hover:bg-secondary/20 group-hover:scale-110 group-hover:text-white group-hover:border-secondary/30 transition-all duration-300 flex-shrink-0 relative z-10">
+                                    <div className="w-14 h-14 rounded-xl bg-surfaceLight text-secondary flex items-center justify-center border border-white/5 transition-all duration-300 flex-shrink-0 relative z-10">
                                         {cert.icon}
                                     </div>
 

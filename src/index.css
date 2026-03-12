@@ -11,7 +11,21 @@
 
   body {
     @apply bg-background text-gray-100 font-sans antialiased overflow-x-hidden;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
   }
+}
+
+.will-change-transform {
+  will-change: transform;
+}
+
+.will-change-opacity {
+  will-change: opacity;
+}
+
+.will-change-perf {
+  will-change: transform, opacity;
 }
 
 .glass {
@@ -56,7 +70,8 @@
   left: 0;
   background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
   transform-origin: bottom right;
-  transition: transform 0.4s ease-out;
+  transition: transform 0.3s ease-out;
+  will-change: transform;
 }
 
 .underline-animation:hover::after {
@@ -66,11 +81,12 @@
 
 .project-card {
   border-radius: 12px;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
-  background: rgba(20, 20, 30, 0.7);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+  background: rgba(20, 20, 30, 0.8);
   /* removed backdrop-filter: blur(12px); for scroll performance */
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  will-change: transform;
 }
 
 .project-card:hover {
