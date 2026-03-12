@@ -51,7 +51,7 @@ const EducationSection = () => {
                             <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-2">Academics</h2>
                         </motion.div>
                         <motion.div variants={fadeIn('up')}>
-                            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Edu<span className="text-gradient hover:animate-pulse cursor-default">cation</span></h3>
+                            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Edu<span className="text-gradient hover:animate-pulse cursor-default">cation</span></h3>
                         </motion.div>
                         <motion.div variants={fadeIn('up')}>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -87,14 +87,14 @@ const EducationSection = () => {
                                     <div className={`w-full pl-[70px] md:pl-0 md:w-[45%] ${isEven ? 'md:pr-10 md:text-right' : 'md:pl-10 md:text-left'}`}>
                                         <motion.div
                                             whileHover={{ scale: 1.05, y: -5, boxShadow: "0 10px 30px -10px rgba(139, 92, 246, 0.4)" }}
-                                            className="glass p-8 rounded-3xl border border-white/10 hover:border-secondary/50 transition-all duration-300 relative group overflow-hidden bg-gradient-to-br from-white/[0.03] to-transparent text-left"
+                                            className="glass p-5 sm:p-8 rounded-3xl border border-white/10 hover:border-secondary/50 transition-all duration-300 relative group overflow-hidden bg-gradient-to-br from-white/[0.03] to-transparent text-left"
                                         >
                                             <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-3xl"></div>
                                             <div className="relative z-10">
-                                                <h4 className={`text-2xl font-bold text-white mb-2 group-hover:text-secondary transition-colors leading-tight ${isEven ? 'md:text-right text-left' : 'text-left'}`}>
+                                                <h4 className={`text-xl sm:text-2xl font-bold text-white mb-2 group-hover:text-secondary transition-colors leading-tight ${isEven ? 'md:text-right text-left' : 'text-left'}`}>
                                                     {edu.degree}
                                                 </h4>
-                                                <p className={`text-primary font-semibold text-lg mb-4 ${isEven ? 'md:text-right text-left' : 'text-left'}`}>
+                                                <p className={`text-primary font-semibold text-base sm:text-lg mb-4 ${isEven ? 'md:text-right text-left' : 'text-left'}`}>
                                                     {edu.institution}
                                                 </p>
                                                 <div className={`flex flex-col gap-2 text-sm text-gray-400 font-medium mb-5 ${isEven ? 'md:items-end items-start' : 'items-start'}`}>

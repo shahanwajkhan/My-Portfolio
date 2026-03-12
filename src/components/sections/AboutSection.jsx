@@ -74,7 +74,7 @@ const AboutSection = () => {
                         <motion.h2 variants={fadeIn('up')} className="text-sm font-bold tracking-widest text-primary uppercase mb-2 flex justify-center items-center gap-2">
                             <Sparkles size={16} /> Discover <Sparkles size={16} />
                         </motion.h2>
-                        <motion.h3 variants={fadeIn('up')} className="text-4xl md:text-5xl font-bold text-white">
+                        <motion.h3 variants={fadeIn('up')} className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">
                             About <span className="text-gradient">Me</span>
                         </motion.h3>
                     </motion.div>
@@ -99,7 +99,7 @@ const AboutSection = () => {
                                     <CodeSnippetCard />
                                 </div>
 
-                                <div className="relative z-10 space-y-6 text-gray-300 text-lg md:text-xl leading-relaxed text-left">
+                                <div className="relative z-10 space-y-6 text-gray-300 text-base sm:text-lg md:text-xl leading-relaxed text-left">
                                     <motion.div
                                         variants={fadeIn('up')}
                                         className="flex items-center gap-3 mb-6"
@@ -107,7 +107,7 @@ const AboutSection = () => {
                                         <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-primary/20 to-secondary/20 flex items-center justify-center border border-white/10 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                                             <Code2 className="text-primary" size={24} />
                                         </div>
-                                        <h4 className="text-2xl font-bold text-white">The Developer Story</h4>
+                                        <h4 className="text-xl sm:text-2xl font-bold text-white">The Developer Story</h4>
                                     </motion.div>
 
                                     <motion.p variants={fadeIn('up')} className="relative group">

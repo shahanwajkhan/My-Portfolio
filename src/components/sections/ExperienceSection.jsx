@@ -47,7 +47,7 @@ const ExperienceSection = () => {
                             <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-2">My Journey</h2>
                         </motion.div>
                         <motion.div variants={fadeIn('up')}>
-                            <h3 className="text-5xl md:text-6xl font-bold text-white mb-6 skill-title-glow tracking-tight text-center">Experience</h3>
+                            <h3 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 skill-title-glow tracking-tight text-center">Experience</h3>
                         </motion.div>
                         <motion.div variants={fadeIn('up')}>
                             <p className="text-gray-400 text-lg max-w-2xl mx-auto">
@@ -68,7 +68,7 @@ const ExperienceSection = () => {
                                 <motion.div
                                     whileHover={{ scale: 1.02, y: -5 }}
                                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                    className="glass p-8 rounded-3xl border border-white/5 hover:border-secondary/50 transition-all duration-500 relative group flex flex-col md:flex-row items-center md:items-start gap-8 shadow-xl hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] overflow-hidden w-full"
+                                    className="glass p-5 sm:p-8 rounded-3xl border border-white/5 hover:border-secondary/50 transition-all duration-500 relative group flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8 shadow-xl hover:shadow-[0_0_30px_rgba(139,92,246,0.2)] overflow-hidden w-full"
                                     style={{
                                         borderRadius: '24px',
                                         background: 'rgba(20,20,30,0.7)',
@@ -91,7 +91,7 @@ const ExperienceSection = () => {
                                         <div className="flex-1 flex flex-col w-full text-center md:text-left">
                                             <div className="flex flex-col md:flex-row md:justify-between md:items-start gap-4 mb-4">
                                                 <div>
-                                                    <h4 className="text-3xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-secondary transition-all leading-tight">
+                                                    <h4 className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-2 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-white group-hover:to-secondary transition-all leading-tight">
                                                         {exp.title}
                                                     </h4>
                                                     <div className="flex flex-col sm:flex-row items-center justify-center md:justify-start gap-3">
@@ -106,9 +106,9 @@ const ExperienceSection = () => {
                                                 </div>
 
                                                 {/* Date & Location block on the right for Desktop */}
-                                                <div className="flex flex-col items-center md:items-end gap-2 text-sm text-gray-400 font-medium shrink-0 bg-white/5 px-4 py-3 rounded-xl border border-white/5">
-                                                    <span className="flex items-center gap-2"><Calendar size={16} className="text-secondary" /> {exp.duration}</span>
-                                                    <span className="flex items-center gap-2"><MapPin size={16} className="text-secondary" /> {exp.location}</span>
+                                                <div className="flex flex-col items-center md:items-end gap-2 text-xs sm:text-sm text-gray-400 font-medium shrink-0 bg-white/5 px-3 sm:px-4 py-2 sm:py-3 rounded-xl border border-white/5">
+                                                    <span className="flex items-center gap-2"><Calendar size={14} className="text-secondary" /> {exp.duration}</span>
+                                                    <span className="flex items-center gap-2"><MapPin size={14} className="text-secondary" /> {exp.location}</span>
                                                 </div>
                                             </div>
 

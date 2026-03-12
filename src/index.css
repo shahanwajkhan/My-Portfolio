@@ -110,15 +110,22 @@
 
 .section-box {
   background: #0a0a0a;
-  border: 2px solid rgba(255, 255, 255, 0.15);
-  border-radius: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Thinner border for cleaner look */
+  border-radius: 1.25rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  padding: 4rem 2rem;
+  padding: 3rem 1.5rem; /* Reduced padding for mobile */
+}
+
+@media (min-width: 768px) {
+  .section-box {
+    padding: 4rem 2.5rem;
+  }
 }
 
 @media (min-width: 1024px) {
   .section-box {
     padding: 6rem 4rem;
+    border-radius: 1.5rem;
   }
 }
 

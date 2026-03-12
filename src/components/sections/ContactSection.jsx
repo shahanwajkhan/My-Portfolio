@@ -74,7 +74,7 @@ const ContactSection = () => {
                             <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-2">Get in touch</h2>
                         </motion.div>
                         <motion.div variants={fadeIn('up')}>
-                            <h3 className="text-4xl md:text-5xl font-bold text-white">Let's <span className="text-gradient">Connect</span></h3>
+                            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white">Let's <span className="text-gradient">Connect</span></h3>
                         </motion.div>
                         <motion.div variants={fadeIn('up')}>
                             <p className="text-gray-400 mt-6 max-w-2xl mx-auto text-lg text-center">
@@ -125,7 +125,7 @@ const ContactSection = () => {
                         <div className="lg:w-2/3 w-full">
                             <motion.form
                                 onSubmit={handleSubmit}
-                                className="glass p-8 md:p-10 rounded-3xl border border-white/5 space-y-6 relative overflow-hidden text-left"
+                                className="glass p-6 sm:p-8 md:p-10 rounded-3xl border border-white/5 space-y-6 relative overflow-hidden text-left"
                                 initial={{ opacity: 0, y: 50 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true, amount: 0.3 }}

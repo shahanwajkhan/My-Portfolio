@@ -99,7 +99,7 @@ const ProjectsSection = () => {
                         className="text-center mb-16"
                     >
                         <motion.h2 variants={fadeIn('up')} className="text-sm font-bold tracking-widest text-primary uppercase mb-2">My Work</motion.h2>
-                        <motion.h3 variants={fadeIn('up')} className="text-4xl md:text-5xl font-bold text-white mb-6">
+                        <motion.h3 variants={fadeIn('up')} className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
                             Featured <span className="text-gradient">Projects</span>
                         </motion.h3>
                         <motion.p variants={fadeIn('up')} className="text-gray-400 max-w-2xl mx-auto text-lg text-center">
@@ -108,12 +108,12 @@ const ProjectsSection = () => {
                     </motion.div>
 
                     {/* Filters */}
-                    <div className="flex flex-wrap justify-center gap-3 mb-16">
+                    <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 sm:mb-16">
                         {categories.map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => setActiveFilter(cat)}
-                                className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${activeFilter === cat
+                                className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${activeFilter === cat
                                     ? 'bg-primary text-white shadow-[0_0_20px_rgba(59,130,246,0.3)]'
                                     : 'bg-white/5 text-gray-400 border border-white/10 hover:border-white/20 hover:text-white hover:bg-white/5'
                                     }`}
@@ -141,7 +141,7 @@ const ProjectsSection = () => {
                                     className="project-card group flex flex-col overflow-hidden h-full text-left bg-surface border border-white/5 transition-colors duration-300 rounded-2xl"
                                 >
                                     {/* Project Image with Hover Zoom */}
-                                    <div className="h-56 relative overflow-hidden bg-white/5 text-left">
+                                    <div className="h-48 sm:h-56 relative overflow-hidden bg-white/5 text-left">
                                         <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10"></div>
                                         <motion.img
                                             src={project.image}
@@ -152,11 +152,11 @@ const ProjectsSection = () => {
                                     </div>
 
                                     {/* Content Details */}
-                                    <div className="p-8 flex flex-col flex-1 text-left">
-                                        <h4 className="text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors text-left">
+                                    <div className="p-5 sm:p-8 flex flex-col flex-1 text-left">
+                                        <h4 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors text-left">
                                             {project.title}
                                         </h4>
-                                        <p className="text-gray-400 text-sm leading-relaxed mb-6 flex-1 line-clamp-3 text-left">
+                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 flex-1 line-clamp-3 text-left">
                                             {project.description}
                                         </p>
 

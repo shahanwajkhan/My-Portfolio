@@ -115,7 +115,7 @@ const CertificationsSection = () => {
                             <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-2">Qualifications</h2>
                         </motion.div>
                         <motion.div variants={fadeIn('up')}>
-                            <h3 className="text-4xl md:text-5xl font-bold text-white mb-6">Licenses & <span className="text-gradient">Certifications</span></h3>
+                            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Licenses & <span className="text-gradient">Certifications</span></h3>
                         </motion.div>
                         <motion.div variants={fadeIn('up')}>
                             <p className="text-gray-400 text-lg">
@@ -140,7 +140,7 @@ const CertificationsSection = () => {
                                 <motion.div
                                     whileHover={{ y: -6, scale: 1.03, boxShadow: "0 15px 35px -10px rgba(139, 92, 246, 0.4)" }}
                                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                    className="glass px-6 py-5 rounded-2xl border border-white/10 hover:border-secondary/50 transition-all duration-300 relative group flex flex-row items-center gap-6 shadow-lg bg-gradient-to-r from-white/[0.03] to-transparent overflow-hidden"
+                                    className="glass px-5 sm:px-6 py-4 sm:py-5 rounded-2xl border border-white/10 hover:border-secondary/50 transition-all duration-300 relative group flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 shadow-lg bg-gradient-to-r from-white/[0.03] to-transparent overflow-hidden text-center sm:text-left"
                                 >
                                     {/* Animated glow on hover */}
                                     <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"></div>
@@ -166,9 +166,9 @@ const CertificationsSection = () => {
                                         href={cert.link}
                                         target="_blank"
                                         rel="noreferrer"
-                                        className="flex-shrink-0 flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-surfaceLight to-surfaceLight hover:from-secondary/20 hover:to-primary/20 border border-white/10 hover:border-secondary/40 rounded-xl text-xs font-semibold text-gray-300 hover:text-white transition-all group/btn shadow-md relative z-10"
+                                        className="flex-shrink-0 flex items-center gap-2 px-4 sm:px-5 py-2 sm:py-2.5 bg-gradient-to-r from-surfaceLight to-surfaceLight hover:from-secondary/20 hover:to-primary/20 border border-white/10 hover:border-secondary/40 rounded-xl text-[10px] sm:text-xs font-semibold text-gray-300 hover:text-white transition-all group/btn shadow-md relative z-10 w-full sm:w-auto justify-center"
                                     >
-                                        View Credential <ExternalLink size={13} className="group-hover/btn:scale-110 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
+                                        View Credential <ExternalLink size={12} className="group-hover/btn:scale-110 group-hover/btn:translate-x-1 group-hover/btn:-translate-y-1 transition-transform" />
                                     </motion.a>
                                 </motion.div>
                             </motion.div>

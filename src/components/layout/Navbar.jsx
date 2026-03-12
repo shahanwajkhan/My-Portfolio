@@ -98,7 +98,7 @@ const Navbar = () => {
                             animate={{ opacity: [0.6, 1, 0.6] }}
                             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
                         >&lt;</motion.span>
-                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-100 to-gray-400 group-hover:from-white group-hover:via-primary group-hover:to-secondary transition-all duration-500 drop-shadow-[0_0_8px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.6)]">
+                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-100 to-gray-400 group-hover:from-white group-hover:via-primary group-hover:to-secondary transition-all duration-500 drop-shadow-[0_0_8px_rgba(255,255,255,0.2)] group-hover:drop-shadow-[0_0_15px_rgba(59,130,246,0.6)] text-xl sm:text-2xl">
                             Shahanwaj
                         </span>
                         <motion.span
@@ -216,20 +216,20 @@ const Navbar = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-                        className="fixed top-0 right-0 h-screen w-[80%] max-w-[320px] bg-surface/95 backdrop-blur-3xl border-l border-white/10 shadow-2xl flex flex-col pt-28 pb-8 px-6 overflow-y-auto z-40 lg:hidden"
+                        className="fixed top-0 right-0 h-screen w-[80%] max-w-[300px] bg-surface/95 backdrop-blur-3xl border-l border-white/10 shadow-2xl flex flex-col pt-24 pb-6 px-5 overflow-y-auto z-40 lg:hidden"
                     >
-                        <div className="flex flex-col space-y-2">
+                        <div className="flex flex-col space-y-1">
                             {navLinks.map((link, i) => {
                                 const isActive = activeSection === link.href;
                                 return (
                                     <motion.a
-                                        initial={{ opacity: 0, x: 20 }}
+                                        initial={{ opacity: 0, x: 10 }}
                                         animate={{ opacity: 1, x: 0 }}
-                                        transition={{ delay: 0.1 + i * 0.05 }}
+                                        transition={{ delay: 0.1 + i * 0.04 }}
                                         key={link.name}
                                         href={link.href}
                                         onClick={(e) => handleNavClick(e, link.href)}
-                                        className={`relative px-4 py-3 rounded-xl text-lg font-medium transition-all flex items-center overflow-hidden ${isActive
+                                        className={`relative px-4 py-3 rounded-xl text-base font-medium transition-all flex items-center overflow-hidden ${isActive
                                                 ? 'text-white bg-primary/10 border border-primary/20 shadow-[0_0_15px_rgba(59,130,246,0.15)]'
                                                 : 'text-gray-400 hover:text-white hover:bg-white/5 border border-transparent'
                                             }`}
@@ -249,15 +249,15 @@ const Navbar = () => {
                         </div>
 
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 10 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ delay: 0.6 }}
-                            className="mt-auto pt-8 border-t border-white/10"
+                            transition={{ delay: 0.5 }}
+                            className="mt-6 pt-6 border-t border-white/10"
                         >
                             <a
                                 href="#contact"
                                 onClick={(e) => handleNavClick(e, '#contact')}
-                                className="flex items-center justify-center w-full py-4 rounded-xl font-bold text-white bg-gradient-to-r from-primary to-secondary shadow-[0_0_20px_rgba(59,130,246,0.4)] active:scale-95 transition-transform"
+                                className="flex items-center justify-center w-full py-3.5 rounded-xl font-bold text-white bg-gradient-to-r from-primary to-secondary shadow-[0_0_20px_rgba(59,130,246,0.4)] active:scale-95 transition-transform"
                             >
                                 Hire Me
                             </a>

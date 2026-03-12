@@ -72,11 +72,11 @@ const HeroSection = () => {
                         </span>
                     </motion.div>
 
-                    <motion.h1 variants={fadeIn('up')} className="text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-2 leading-tight">
+                    <motion.h1 variants={fadeIn('up')} className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white mb-2 leading-tight">
                         Hi, I'm <span className="text-gradient">Shahanwaj Khan</span>
                     </motion.h1>
 
-                    <motion.h2 variants={fadeIn('up')} className="text-2xl md:text-4xl font-bold text-gray-300 h-20 md:h-12 flex items-center justify-center md:justify-start">
+                    <motion.h2 variants={fadeIn('up')} className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-300 h-24 sm:h-20 md:h-12 flex items-center justify-center md:justify-start">
                         <span className="text-primary border-r-2 border-primary pr-2 animate-pulse">
                             <Typewriter
                                 words={['CSE Undergraduate', 'Full Stack Web Developer', 'MERN Stack Developer', 'AI/ML Enthusiast', 'Software Developer']}
@@ -90,7 +90,7 @@ const HeroSection = () => {
                         </span>
                     </motion.h2>
 
-                    <motion.p variants={fadeIn('up')} className="text-lg text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed">
+                    <motion.p variants={fadeIn('up')} className="text-base sm:text-lg text-gray-400 max-w-xl mx-auto md:mx-0 leading-relaxed">
                         I build scalable web applications, intelligent AI-powered tools, and modern full stack platforms.
                         Let's create something extraordinary together.
                     </motion.p>
@@ -136,7 +136,7 @@ const HeroSection = () => {
                         variants={zoomIn()}
                         initial="hidden"
                         animate="visible"
-                        className="relative w-72 h-72 md:w-96 md:h-96 group z-10"
+                        className="relative w-64 h-64 sm:w-72 sm:h-72 md:w-96 md:h-96 group z-10"
                     >
                         <motion.div variants={floatingAnimation} animate="animate" className="absolute inset-0">
                             {/* Static animated rings (CSS) */}

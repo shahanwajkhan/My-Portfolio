@@ -120,7 +120,7 @@ const AchievementsSection = () => {
                             <h2 className="text-sm font-bold tracking-widest text-secondary uppercase mb-2">Milestones</h2>
                         </motion.div>
                         <motion.div variants={fadeIn('up')}>
-                            <h3 className="text-5xl md:text-6xl font-bold text-white mb-6 skill-title-glow tracking-tight text-center">Achievements</h3>
+                            <h3 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6 skill-title-glow tracking-tight text-center">Achievements</h3>
                         </motion.div>
                         <motion.div variants={fadeIn('up')}>
                             <p className="text-gray-400 text-lg">
@@ -143,11 +143,11 @@ const AchievementsSection = () => {
                             { label: "Certifications", value: "6", suffix: "" },
                             { label: "Hackathons", value: "2", suffix: "" },
                         ].map((stat, idx) => (
-                            <motion.div key={idx} variants={fadeIn('up')} className="glass p-6 rounded-2xl border border-white/5 text-center shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] hover:border-secondary/40 transition-all duration-300 group">
-                                <h4 className="text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-secondary mb-2 group-hover:scale-110 transition-transform duration-300 drop-shadow-md">
+                            <motion.div key={idx} variants={fadeIn('up')} className="glass p-4 sm:p-6 rounded-2xl border border-white/5 text-center shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] hover:border-secondary/40 transition-all duration-300 group">
+                                <h4 className="text-2xl sm:text-4xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-white to-secondary mb-1 sm:mb-2 group-hover:scale-110 transition-transform duration-300 drop-shadow-md">
                                     <CountUp to={stat.value} suffix={stat.suffix} />
                                 </h4>
-                                <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">{stat.label}</p>
+                                <p className="text-[10px] sm:text-xs font-bold text-gray-400 uppercase tracking-widest">{stat.label}</p>
                             </motion.div>
                         ))}
                     </motion.div>
@@ -168,7 +168,7 @@ const AchievementsSection = () => {
                                 <motion.div
                                     whileHover={{ y: -6, scale: 1.02, boxShadow: "0 15px 35px -10px rgba(139, 92, 246, 0.4)" }}
                                     transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                                    className="glass px-6 py-6 rounded-2xl border border-white/10 hover:border-secondary/50 transition-all duration-300 relative group flex flex-col md:flex-row items-center gap-6 shadow-lg bg-gradient-to-r from-white/[0.03] to-transparent overflow-hidden"
+                                    className="glass px-5 sm:px-6 py-5 sm:py-6 rounded-2xl border border-white/10 hover:border-secondary/50 transition-all duration-300 relative group flex flex-col md:flex-row items-center gap-6 shadow-lg bg-gradient-to-r from-white/[0.03] to-transparent overflow-hidden"
                                     style={{
                                         borderRadius: '16px',
                                         background: 'rgba(20,20,30,0.6)',
