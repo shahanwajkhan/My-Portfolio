@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-gray-100 font-sans antialiased overflow-x-hidden;
+  }
+}
+
+.glass {
+  @apply bg-white/5 border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary via-secondary to-accent animate-gradient-x;
+}
+
+/* Custom Webkit Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Premium Hover Animations */
+.underline-animation {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-animation::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background-image: linear-gradient(to right, var(--tw-gradient-from), var(--tw-gradient-to));
+  transform-origin: bottom right;
+  transition: transform 0.4s ease-out;
+}
+
+.underline-animation:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.project-card {
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  background: rgba(20, 20, 30, 0.7);
+  /* removed backdrop-filter: blur(12px); for scroll performance */
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.project-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 20px rgba(59, 130, 246, 0.1);
+}
+
+.btn-primary-gradient {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: #ffffff;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary-gradient:hover {
+  box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+  transform: scale(1.02);
+  background: linear-gradient(135deg, #2563eb 0%, #1d4ed8 100%);
+}
+
+.tech-badge {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+  cursor: default;
+}
+
+.tech-badge:hover {
+  border-color: rgba(59, 130, 246, 0.5);
+  background: rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.3);
+}
+
+.section-box {
+  background: #0a0a0a;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 1.5rem;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  padding: 4rem 2rem;
+}
+
+@media (min-width: 1024px) {
+  .section-box {
+    padding: 6rem 4rem;
+  }
+}
+
+.skill-title-glow {
+  text-shadow: 0 0 20px rgba(99, 102, 241, 0.4);
+  font-family: 'Outfit', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.skill-card-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  animation: hue-rotate 10s linear infinite;
+}
+
+@keyframes hue-rotate {
+  from {
+    filter: hue-rotate(0deg);
+  }
+
+  to {
+    filter: hue-rotate(360deg);
+  }
+}
+
+.skill-card-glow {
+  position: relative;
+  z-index: 1;
+}
+
+.skill-card-glow::before {
+  content: '';
+  position: absolute;
+  inset: -1.5px;
+  background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899, #3b82f6);
+  background-size: 300% 300%;
+  z-index: -1;
+  border-radius: 13px;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  animation: border-flow 6s linear infinite;
+}
+
+.skill-card-glow:hover::before {
+  opacity: 1;
+}
+
+@keyframes border-flow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}

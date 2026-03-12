@@ -1,0 +1,128 @@
+﻿
+> portfolio@0.0.0 build
+> vite build
+
+[36mvite v7.3.1 [32mbuilding client environment for production...[36m[39m
+transforming...
+[32mΓ£ô[39m 2158 modules transformed.
+node.exe : 
+[31mΓ£ù[39m Build 
+failed in 6.04s
+At C:\Program Files\nod
+ejs\npm.ps1:29 char:3
++   & $NODE_EXE 
+$NPM_CLI_JS $args
++   ~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~
+    + CategoryInfo     
+         : NotSpecifi  
+  ed: ([31mΓ£ù[39m   
+  Build failed in 6    
+.04s:String) [], R    
+emoteException
+    + FullyQualifiedEr 
+   rorId : NativeComm  
+  andError
+ 
+[31merror during 
+build:
+[31msrc/components/sec
+tions/SkillsSection.jsx
+ (6:13): "SiCss3" is 
+not exported by "node_m
+odules/react-icons/si/i
+ndex.mjs", imported by 
+"src/components/section
+s/SkillsSection.jsx".[
+31m
+file: [36mC:/Users/sha
+ha/OneDrive/Desktop/por
+tfolio/src/components/s
+ections/SkillsSection.j
+sx:6:13[31m
+[33m
+4: import {
+5:     SiC, 
+SiCplusplus, SiPython, 
+SiJavascript, 
+SiTypescript,
+6:     SiHtml5, 
+SiCss3, SiTailwindcss, 
+SiPhp, SiReact, 
+SiNodedotjs, 
+SiExpress, 
+SiBootstrap, SiJquery,
+                ^
+7:     SiMongodb, 
+SiMysql, SiPostgresql,
+8:     
+SiVisualstudiocode, 
+SiFigma, SiXampp, 
+SiGit, SiGithub
+[31m
+    at getRollupError (
+file:///C:/Users/shaha/
+OneDrive/Desktop/portfo
+lio/node_modules/rollup
+/dist/es/shared/parseAs
+t.js:402:41)
+    at error (file:///C
+:/Users/shaha/OneDrive/
+Desktop/portfolio/node_
+modules/rollup/dist/es/
+shared/parseAst.js:398:
+42)
+    at Module.error (fi
+le:///C:/Users/shaha/On
+eDrive/Desktop/portfoli
+o/node_modules/rollup/d
+ist/es/shared/node-entr
+y.js:17040:16)
+    at 
+Module.traceVariable (f
+ile:///C:/Users/shaha/O
+neDrive/Desktop/portfol
+io/node_modules/rollup/
+dist/es/shared/node-ent
+ry.js:17452:29)
+    at ModuleScope.find
+Variable (file:///C:/Us
+ers/shaha/OneDrive/Desk
+top/portfolio/node_modu
+les/rollup/dist/es/shar
+ed/node-entry.js:15070:
+39)
+    at ReturnValueScope
+.findVariable (file:///
+C:/Users/shaha/OneDrive
+/Desktop/portfolio/node
+_modules/rollup/dist/es
+/shared/node-entry.js:5
+673:38)
+    at FunctionBodyScop
+e.findVariable (file://
+/C:/Users/shaha/OneDriv
+e/Desktop/portfolio/nod
+e_modules/rollup/dist/e
+s/shared/node-entry.js:
+5673:38)
+    at Identifier.bind 
+(file:///C:/Users/shaha
+/OneDrive/Desktop/portf
+olio/node_modules/rollu
+p/dist/es/shared/node-e
+ntry.js:5447:40)
+    at 
+CallExpression.bind (fi
+le:///C:/Users/shaha/On
+eDrive/Desktop/portfoli
+o/node_modules/rollup/d
+ist/es/shared/node-entr
+y.js:2825:28)
+    at 
+CallExpression.bind (fi
+le:///C:/Users/shaha/On
+eDrive/Desktop/portfoli
+o/node_modules/rollup/d
+ist/es/shared/node-entr
+y.js:12179:15)[39m
