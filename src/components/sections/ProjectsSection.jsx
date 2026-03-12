@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { ExternalLink, Github } from 'lucide-react';
+import React, { useState } from 'react';
+import { ExternalLink, Github, X, Maximize2, Sparkles } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { fadeIn, staggerContainer } from '../../animations/variants';
 
 const ProjectsSection = () => {
     const [activeFilter, setActiveFilter] = useState('All');
-    const [isVisible, setIsVisible] = useState(false);
-    const sectionRef = React.useRef(null);
 
     const categories = ['All', 'AI Projects', 'Full Stack', 'Web Apps', 'Machine Learning'];
 
@@ -78,37 +78,44 @@ const ProjectsSection = () => {
         ? projects
         : projects.filter(project => project.categories.includes(activeFilter));
 
-    useEffect(() => {
-        const observer = new IntersectionObserver(([entry]) => {
-            if (entry.isIntersecting) {
-                setIsVisible(true);
-                observer.unobserve(entry.target);
-            }
-        }, { threshold: 0.1 });
-        if (sectionRef.current) observer.observe(sectionRef.current);
-        return () => observer.disconnect();
-    }, []);
-
     return (
-        <section id="projects" ref={sectionRef} className="py-24 relative overflow-hidden">
-            <div className="container mx-auto px-6 md:px-12 relative z-10 w-full max-w-[1600px]">
-                <div className={`section-box reveal ${isVisible ? 'is-visible' : ''}`}>
-                    <div className="text-center mb-16">
-                        <h2 className="text-sm font-bold tracking-widest text-primary uppercase mb-2">My Work</h2>
-                        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">Featured Projects</h1>
-                        <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-                            Exploring the intersection of AI, Full Stack development, and modern web architecture.
-                        </p>
-                    </div>
+        <section id="projects" className="py-24 relative overflow-hidden">
+            {/* Background elements */}
+            <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[radial-gradient(ellipse_at_center,_rgba(59,130,246,0.1)_0%,_transparent_70%)] rounded-full -translate-x-1/2 pointer-events-none"></div>
+            <div className="absolute bottom-1/4 right-0 w-[400px] h-[400px] bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.1)_0%,_transparent_70%)] rounded-full translate-x-1/2 pointer-events-none"></div>
 
+            <div className="container mx-auto px-6 md:px-12 relative z-10 w-full max-w-[1600px]">
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="section-box"
+                >
+                    <motion.div
+                        initial="hidden"
+                        whileInView="visible"
+                        viewport={{ once: true, amount: 0.2 }}
+                        variants={staggerContainer(0.1)}
+                        className="text-center mb-16"
+                    >
+                        <motion.h2 variants={fadeIn('up')} className="text-sm font-bold tracking-widest text-primary uppercase mb-2">My Work</motion.h2>
+                        <motion.h3 variants={fadeIn('up')} className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-6">
+                            Featured <span className="text-gradient">Projects</span>
+                        </motion.h3>
+                        <motion.p variants={fadeIn('up')} className="text-gray-400 max-w-2xl mx-auto text-lg text-center">
+                            Exploring the intersection of AI, Full Stack development, and modern web architecture.
+                        </motion.p>
+                    </motion.div>
+
+                    {/* Filters */}
                     <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12 sm:mb-16">
                         {categories.map((cat) => (
                             <button
                                 key={cat}
                                 onClick={() => setActiveFilter(cat)}
                                 className={`px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 ${activeFilter === cat
-                                    ? 'bg-primary text-white border-transparent'
-                                    : 'bg-white/5 text-gray-400 border border-white/5 hover:border-primary/50 hover:text-white'
+                                    ? 'bg-primary text-white shadow-[0_0_20px_rgba(59,130,246,0.3)]'
+                                    : 'bg-white/5 text-gray-400 border border-white/10 hover:border-white/20 hover:text-white hover:bg-white/5'
                                     }`}
                             >
                                 {cat}
@@ -116,53 +123,85 @@ const ProjectsSection = () => {
                         ))}
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {filteredProjects.map((project) => (
-                            <div
-                                key={project.title}
-                                className="project-card flex flex-col overflow-hidden h-full text-left bg-surface border border-white/5 transition-all duration-300 rounded-2xl hover:border-primary/30"
-                            >
-                                <div className="h-48 sm:h-56 relative overflow-hidden bg-white/5">
-                                    <img
-                                        src={project.image}
-                                        alt={project.title}
-                                        loading="lazy"
-                                        className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
-                                    />
-                                </div>
-
-                                <div className="p-5 sm:p-8 flex flex-col flex-1">
-                                    <h4 className="text-xl sm:text-2xl font-bold text-white mb-3 hover:text-primary transition-colors">
-                                        {project.title}
-                                    </h4>
-                                    <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 flex-1 line-clamp-3">
-                                        {project.description}
-                                    </p>
-
-                                    <div className="flex flex-wrap gap-2 mb-8">
-                                        {project.tech.map((t) => (
-                                            <span key={t} className="px-3 py-1 bg-white/5 rounded-lg text-[10px] font-bold text-gray-400 border border-white/5 uppercase tracking-wider">
-                                                {t}
-                                            </span>
-                                        ))}
+                    {/* Projects Grid */}
+                    <motion.div
+                        layout
+                        className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+                    >
+                        <AnimatePresence mode="popLayout">
+                            {filteredProjects.map((project) => (
+                                <motion.div
+                                    key={project.title}
+                                    layout
+                                    initial={{ opacity: 0, scale: 0.9, y: 30 }}
+                                    animate={{ opacity: 1, scale: 1, y: 0 }}
+                                    exit={{ opacity: 0, scale: 0.9, y: 30 }}
+                                    transition={{ duration: 0.4, type: "spring", stiffness: 200, damping: 20 }}
+                                    whileHover={{ y: -10, boxShadow: "0 20px 40px -10px rgba(59, 130, 246, 0.3)", borderColor: "rgba(59,130,246,0.5)" }}
+                                    className="project-card group flex flex-col overflow-hidden h-full text-left bg-surface border border-white/5 transition-colors duration-300 rounded-2xl"
+                                >
+                                    {/* Project Image with Hover Zoom */}
+                                    <div className="h-48 sm:h-56 relative overflow-hidden bg-white/5 text-left">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent z-10"></div>
+                                        <motion.img
+                                            src={project.image}
+                                            alt={project.title}
+                                            loading="lazy"
+                                            className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                                        />
                                     </div>
 
-                                    <div className="flex items-center gap-4 mt-auto">
-                                        <a href={project.demo} target="_blank" rel="noreferrer" className="flex-1 bg-primary text-white px-6 py-3 rounded-xl flex items-center justify-center gap-2 text-sm font-bold">
-                                            Live Demo <ExternalLink size={16} />
-                                        </a>
-                                        <a href={project.github} target="_blank" rel="noreferrer" className="p-3 rounded-xl bg-white/5 border border-white/10 text-white transition-all hover:bg-white/10">
-                                            <Github size={20} />
-                                        </a>
+                                    {/* Content Details */}
+                                    <div className="p-5 sm:p-8 flex flex-col flex-1 text-left">
+                                        <h4 className="text-xl sm:text-2xl font-bold text-white mb-3 group-hover:text-primary transition-colors text-left">
+                                            {project.title}
+                                        </h4>
+                                        <p className="text-gray-400 text-xs sm:text-sm leading-relaxed mb-6 flex-1 line-clamp-3 text-left">
+                                            {project.description}
+                                        </p>
+
+                                        {/* Tech Stack Badges */}
+                                        <div className="flex flex-wrap gap-2 mb-8">
+                                            {project.tech.map((t) => (
+                                                <span key={t} className="tech-badge">
+                                                    {t}
+                                                </span>
+                                            ))}
+                                        </div>
+
+                                        {/* Action Buttons */}
+                                        <div className="flex items-center gap-4 mt-auto">
+                                            <motion.a
+                                                whileHover={{ scale: 1.05, boxShadow: "0 0 20px rgba(59,130,246,0.6)" }}
+                                                whileTap={{ scale: 0.95 }}
+                                                href={project.demo}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="flex-1 btn-primary-gradient px-6 py-3 rounded-xl flex items-center justify-center gap-2 text-sm text-white bg-gradient-to-r from-primary to-secondary relative overflow-hidden"
+                                            >
+                                                Live Demo <ExternalLink size={16} />
+                                            </motion.a>
+                                            <motion.a
+                                                whileHover={{ scale: 1.1, boxShadow: "0 0 15px rgba(255,255,255,0.3)", backgroundColor: "rgba(255,255,255,0.15)" }}
+                                                whileTap={{ scale: 0.95 }}
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noreferrer"
+                                                className="p-3 rounded-xl bg-white/5 border border-white/10 text-white transition-all duration-300"
+                                                title="View GitHub Repository"
+                                            >
+                                                <Github size={20} />
+                                            </motion.a>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                        ))}
-                    </div>
-                </div>
+                                </motion.div>
+                            ))}
+                        </AnimatePresence>
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );
 };
 
-export default React.memo(ProjectsSection);
+export default ProjectsSection;
