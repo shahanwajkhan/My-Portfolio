@@ -31,7 +31,7 @@ const EducationSection = () => {
     return (
         <section id="education" className="py-24 relative overflow-hidden border-t border-white/5">
             {/* Simplified background element */}
-            <div className="absolute top-1/2 left-0 w-[300px] h-[300px] bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.06)_0%,_transparent_70%)] rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
+            <div className="absolute top-1/2 left-0 w-[200px] h-[200px] bg-[radial-gradient(ellipse_at_center,_rgba(139,92,246,0.04)_0%,_transparent_70%)] rounded-full -translate-y-1/2 -translate-x-1/2 pointer-events-none"></div>
 
             <div className="container mx-auto px-6 md:px-12 relative z-10 max-w-[1600px]">
                 <motion.div
@@ -76,7 +76,7 @@ const EducationSection = () => {
                                     className={`relative flex flex-col md:flex-row items-center justify-between mb-16 ${isEven ? 'md:flex-row-reverse' : ''}`}
                                 >
                                     {/* Timeline Node */}
-                                    <div className="absolute left-[24px] md:left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-surface border-4 border-secondary/80 flex items-center justify-center shadow-lg z-20 hover:scale-105 transition-transform duration-300 cursor-default will-change-transform">
+                                    <div className="absolute left-[24px] md:left-1/2 -translate-x-1/2 w-14 h-14 rounded-full bg-surface border-2 border-secondary/50 flex items-center justify-center shadow-md z-20 pointer-events-none">
                                         <GraduationCap size={24} className="text-secondary" />
                                     </div>
 
@@ -86,9 +86,9 @@ const EducationSection = () => {
                                     {/* Content Card */}
                                     <div className={`w-full pl-[70px] md:pl-0 md:w-[45%] ${isEven ? 'md:pr-10 md:text-right' : 'md:pl-10 md:text-left'}`}>
                                         <motion.div
-                                            whileHover={{ scale: 1.01, y: -2 }}
-                                            transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                                            className="glass p-5 sm:p-8 rounded-3xl border border-white/5 hover:border-secondary/30 transition-all duration-300 relative group overflow-hidden bg-gradient-to-br from-white/[0.03] to-transparent text-left will-change-transform"
+                                            whileHover={{ y: -2 }}
+                                            transition={{ duration: 0.2 }}
+                                            className="glass p-5 sm:p-8 rounded-3xl border border-white/5 hover:border-secondary/20 transition-all duration-300 relative group overflow-hidden bg-gradient-to-br from-white/[0.03] to-transparent text-left will-change-transform"
                                         >
                                             <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 to-primary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-3xl"></div>
                                             <div className="relative z-10">

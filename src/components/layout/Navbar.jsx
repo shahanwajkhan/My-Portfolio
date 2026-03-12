@@ -8,7 +8,14 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState('#hero');
 
     useEffect(() => {
+        let lastScrollTime = 0;
+        const throttleDelay = 100; // ms
+
         const handleScroll = () => {
+            const now = Date.now();
+            if (now - lastScrollTime < throttleDelay) return;
+            lastScrollTime = now;
+
             setScrolled(window.scrollY > 50);
 
             // Scroll Spy Logic
@@ -31,7 +38,7 @@ const Navbar = () => {
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
     }, [activeSection]);
@@ -75,8 +82,8 @@ const Navbar = () => {
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.8, ease: "easeOut" }}
-                className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out border-b ${scrolled
-                        ? 'bg-background/70 backdrop-blur-xl border-white/10 py-3 shadow-[0_10px_30px_rgba(0,0,0,0.5)]'
+                className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ease-in-out border-b ${scrolled
+                        ? 'bg-background/95 border-white/5 py-3 shadow-lg'
                         : 'bg-transparent border-transparent py-6'
                     }`}
             >
@@ -110,7 +117,7 @@ const Navbar = () => {
 
                     {/* Desktop Navigation */}
                     <div className="hidden lg:flex items-center space-x-1 xl:space-x-4">
-                        <div className="flex items-center space-x-1 xl:space-x-3 bg-white/5 rounded-full px-4 py-2 border border-white/10 shadow-inner backdrop-blur-md">
+                        <div className="flex items-center space-x-1 xl:space-x-3 bg-white/[0.03] rounded-full px-4 py-2 border border-white/5 shadow-inner">
                             {navLinks.map((link, index) => {
                                 const isActive = activeSection === link.href;
                                 return (
@@ -175,7 +182,7 @@ const Navbar = () => {
                     <div className="lg:hidden flex items-center z-50">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="relative text-white focus:outline-none p-2.5 rounded-xl bg-surfaceLight/50 backdrop-blur-md border border-white/10 hover:border-primary/50 hover:bg-white/10 transition-all shadow-[0_0_15px_rgba(0,0,0,0.3)]"
+                            className="relative text-white focus:outline-none p-2.5 rounded-xl bg-surfaceLight/80 border border-white/5 hover:bg-white/10 transition-all shadow-md"
                             aria-label="Toggle Menu"
                         >
                             <AnimatePresence mode="wait">
@@ -202,7 +209,7 @@ const Navbar = () => {
                         animate={{ opacity: 1 }}
                         exit={{ opacity: 0 }}
                         transition={{ duration: 0.3 }}
-                        className="fixed inset-0 bg-black/60 backdrop-blur-sm z-40 lg:hidden"
+                        className="fixed inset-0 bg-black/40 z-40 lg:hidden"
                         onClick={() => setIsOpen(false)}
                     />
                 )}
@@ -216,7 +223,7 @@ const Navbar = () => {
                         animate={{ opacity: 1, x: 0 }}
                         exit={{ opacity: 0, x: "100%" }}
                         transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-                        className="fixed top-0 right-0 h-screen w-[80%] max-w-[300px] bg-surface/95 backdrop-blur-3xl border-l border-white/10 shadow-2xl flex flex-col pt-24 pb-6 px-5 overflow-y-auto z-40 lg:hidden"
+                        className="fixed top-0 right-0 h-screen w-[80%] max-w-[300px] bg-surface border-l border-white/5 shadow-2xl flex flex-col pt-24 pb-6 px-5 overflow-y-auto z-40 lg:hidden"
                     >
                         <div className="flex flex-col space-y-1">
                             {navLinks.map((link, i) => {

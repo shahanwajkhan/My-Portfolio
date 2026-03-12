@@ -119,12 +119,12 @@ const CertificationsSection = () => {
                                 style={{ perspective: 1000 }}
                             >
                                 <motion.div
-                                    whileHover={{ y: -3, scale: 1.01 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                                    className="glass px-5 sm:px-6 py-4 sm:py-5 rounded-2xl border border-white/5 hover:border-secondary/30 transition-all duration-300 relative group flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 shadow-md bg-gradient-to-r from-white/[0.03] to-transparent overflow-hidden text-center sm:text-left will-change-transform"
+                                    whileHover={{ y: -2 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="glass px-5 sm:px-6 py-4 sm:py-5 rounded-2xl border border-white/5 hover:border-secondary/20 transition-all duration-300 relative group flex flex-col sm:flex-row items-center sm:items-center gap-4 sm:gap-6 shadow-sm bg-[#161622] overflow-hidden text-center sm:text-left will-change-transform"
                                 >
-                                    {/* Animated glow on hover */}
-                                    <div className="absolute inset-0 bg-gradient-to-r from-secondary/10 via-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none rounded-2xl"></div>
+                                    {/* Simplified highlight */}
+                                    <div className="absolute inset-0 bg-white/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none rounded-2xl"></div>
 
                                     {/* Left accent bar */}
                                     <div className="absolute top-0 left-0 w-1 h-full bg-gradient-to-b from-secondary to-primary opacity-50 group-hover:opacity-100 group-hover:w-1.5 transition-all duration-300 rounded-l-2xl"></div>

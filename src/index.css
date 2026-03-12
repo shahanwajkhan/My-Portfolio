@@ -29,7 +29,7 @@
 }
 
 .glass {
-  @apply bg-white/5 border border-white/10;
+  @apply bg-[#12121a]/80 border border-white/5;
 }
 
 .text-gradient {
@@ -81,17 +81,16 @@
 
 .project-card {
   border-radius: 12px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
-  background: rgba(20, 20, 30, 0.8);
-  /* removed backdrop-filter: blur(12px); for scroll performance */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+  background: #161622;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease, border-color 0.3s ease;
   will-change: transform;
 }
 
 .project-card:hover {
-  border-color: rgba(59, 130, 246, 0.3);
-  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 20px rgba(59, 130, 246, 0.1);
+  border-color: rgba(59, 130, 246, 0.2);
+  transform: translateY(-4px);
 }
 
 .btn-primary-gradient {
@@ -125,11 +124,12 @@
 }
 
 .section-box {
-  background: #0a0a0a;
-  border: 1px solid rgba(255, 255, 255, 0.15); /* Thinner border for cleaner look */
-  border-radius: 1.25rem;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
-  padding: 3rem 1.5rem; /* Reduced padding for mobile */
+  background: #08080c;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  padding: 2.5rem 1.25rem;
+  will-change: transform, opacity;
 }
 
 @media (min-width: 768px) {

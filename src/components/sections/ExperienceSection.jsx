@@ -66,9 +66,9 @@ const ExperienceSection = () => {
                         {experiences.map((exp, idx) => (
                             <motion.div key={idx} variants={fadeIn('up')} style={{ perspective: 1000 }}>
                                 <motion.div
-                                    whileHover={{ scale: 1.01, y: -2 }}
-                                    transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                                    className="glass p-5 sm:p-8 rounded-3xl border border-white/5 hover:border-secondary/30 transition-all duration-300 relative group flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8 shadow-lg hover:shadow-[0_0_20px_rgba(139,92,246,0.1)] overflow-hidden w-full will-change-transform"
+                                    whileHover={{ y: -2 }}
+                                    transition={{ duration: 0.2 }}
+                                    className="glass p-5 sm:p-8 rounded-3xl border border-white/5 hover:border-secondary/20 transition-all duration-300 relative group flex flex-col md:flex-row items-center md:items-start gap-6 sm:gap-8 shadow-md overflow-hidden w-full will-change-transform"
                                     style={{
                                         borderRadius: '24px',
                                         background: 'rgba(20,20,30,0.7)',
