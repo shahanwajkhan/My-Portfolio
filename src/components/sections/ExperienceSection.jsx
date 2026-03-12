@@ -195,4 +195,4 @@ const ExperienceSection = () => {
     );
 };
 
-export default ExperienceSection;
+export default React.memo(ExperienceSection);

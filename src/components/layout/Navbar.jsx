@@ -8,40 +8,41 @@ const Navbar = () => {
     const [activeSection, setActiveSection] = useState('#hero');
 
     useEffect(() => {
-        let lastScrollTime = 0;
-        const throttleDelay = 100; // ms
-
         const handleScroll = () => {
-            const now = Date.now();
-            if (now - lastScrollTime < throttleDelay) return;
-            lastScrollTime = now;
-
             setScrolled(window.scrollY > 50);
-
-            // Scroll Spy Logic
-            const sections = navLinks.map(link => link.href.substring(1));
-            let current = '';
-
-            for (const section of sections) {
-                const element = document.getElementById(section);
-                if (element) {
-                    const rect = element.getBoundingClientRect();
-                    if (rect.top <= 200 && rect.bottom >= 200) {
-                        current = `#${section}`;
-                        break;
-                    }
-                }
-            }
-
-            if (current && current !== activeSection) {
-                setActiveSection(current);
-            }
         };
 
         window.addEventListener('scroll', handleScroll, { passive: true });
         handleScroll();
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [activeSection]);
+
+        // Intersection Observer for Scroll Spy
+        const observerOptions = {
+            root: null,
+            rootMargin: '-20% 0px -70% 0px',
+            threshold: 0
+        };
+
+        const observerCallback = (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    setActiveSection(`#${entry.target.id}`);
+                }
+            });
+        };
+
+        const observer = new IntersectionObserver(observerCallback, observerOptions);
+        const sections = ['hero', 'about', 'skills', 'experience', 'education', 'certifications', 'projects', 'contact'];
+        
+        sections.forEach((sectionId) => {
+            const element = document.getElementById(sectionId);
+            if (element) observer.observe(element);
+        });
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+            observer.disconnect();
+        };
+    }, []);
 
     // Prevent body scroll when mobile menu is open
     useEffect(() => {

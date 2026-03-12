@@ -161,4 +161,4 @@ const CertificationsSection = () => {
     );
 };
 
-export default CertificationsSection;
+export default React.memo(CertificationsSection);

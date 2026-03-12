@@ -119,4 +119,4 @@ const EducationSection = () => {
     );
 };
 
-export default EducationSection;
+export default React.memo(EducationSection);
