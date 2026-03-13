@@ -32,7 +32,7 @@ const ProjectsSection = () => {
             description: 'AI-powered learning assistant platform featuring structured coding support, assignment generation, and interactive quizzes powered by LLMs.',
             tech: ['HTML', 'CSS', 'JavaScript', 'Node.js', 'Python', 'Flask', 'Gemini API'],
             categories: ['AI Projects', 'Full Stack'],
-            github: 'https://github.com/shahanwajkhan',
+            github: 'https://github.com/shahanwajkhan/Dev_Orbit',
             demo: 'https://dev-orbit-orcin.vercel.app/',
             image: 'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=600&auto=format&fit=crop'
         },

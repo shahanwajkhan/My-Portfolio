@@ -43,7 +43,7 @@ const AchievementsSection = () => {
     const achievements = [
         {
             title: 'Coding Practice',
-            description: 'Solved 300+ coding problems across platforms like LeetCode, HackerRank, and GeeksforGeeks, strengthening problem-solving skills, algorithms, and data structures knowledge.',
+            description: 'Solved 150+ coding problems across platforms like LeetCode, HackerRank, and GeeksforGeeks, strengthening problem-solving skills, algorithms, and data structures knowledge.',
             tag: 'CODING',
             icon: <Code size={28} />
         },
@@ -138,9 +138,9 @@ const AchievementsSection = () => {
                         className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-16 max-w-4xl mx-auto"
                     >
                         {[
-                            { label: "DSA Problems", value: "300", suffix: "+" },
+                            { label: "DSA Problems", value: "150", suffix: "+" },
                             { label: "Projects Built", value: "12", suffix: "+" },
-                            { label: "Certifications", value: "6", suffix: "" },
+                            { label: "Certifications", value: "7", suffix: "" },
                             { label: "Hackathons", value: "2", suffix: "" },
                         ].map((stat, idx) => (
                             <motion.div key={idx} variants={fadeIn('up')} className="glass p-4 sm:p-6 rounded-2xl border border-white/5 text-center shadow-[0_0_15px_rgba(0,0,0,0.2)] hover:shadow-[0_0_20px_rgba(139,92,246,0.15)] hover:border-secondary/40 transition-all duration-300 group">

@@ -113,7 +113,7 @@ const HeroSection = () => {
                             whileTap={{ scale: 0.95 }}
                             className="px-6 py-3 rounded-xl glass text-white font-semibold hover:bg-white/10 transition-all w-full sm:w-auto text-center flex items-center justify-center group shadow-[0_0_15px_rgba(255,255,255,0.05)]"
                         >
-                            Download Resume <Download size={18} className="ml-2 group-hover:-translate-y-1 transition-transform" />
+                            View Resume <Download size={18} className="ml-2 group-hover:-translate-y-1 transition-transform" />
                         </motion.a>
                     </motion.div>
 
