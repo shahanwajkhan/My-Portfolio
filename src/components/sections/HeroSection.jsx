@@ -106,14 +106,14 @@ const HeroSection = () => {
                             <span className="relative z-10 flex items-center">View Projects <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" /></span>
                         </motion.a>
                         <motion.a
-                            href="https://drive.google.com/file/d/1gFjB_78f4Xa6PT7j4p1Wvoca--pF6H24/view?usp=sharing"
+                            href="https://drive.google.com/file/d/1zSlvmuP140H0wGEaz0XJ9i-BG-mf5q-h/view?usp=sharing"
                             target="_blank"
                             rel="noreferrer"
                             whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(255,255,255,0.2)" }}
                             whileTap={{ scale: 0.95 }}
                             className="px-6 py-3 rounded-xl glass text-white font-semibold hover:bg-white/10 transition-all w-full sm:w-auto text-center flex items-center justify-center group shadow-[0_0_15px_rgba(255,255,255,0.05)]"
                         >
-                            View Resume <Download size={18} className="ml-2 group-hover:-translate-y-1 transition-transform" />
+                            View Resume
                         </motion.a>
                     </motion.div>
 
