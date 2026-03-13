@@ -42,7 +42,7 @@ const ProjectsSection = () => {
             tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'SQL', 'Tailwind CSS'],
             categories: ['Web Apps', 'Full Stack'],
             github: 'https://github.com/shahanwajkhan/Traffic-Management-System',
-            demo: '#',
+            demo: 'https://traffic-lime-rho.vercel.app/',
             image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=600&auto=format&fit=crop'
         },
         {
