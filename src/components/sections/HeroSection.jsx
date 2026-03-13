@@ -106,7 +106,7 @@ const HeroSection = () => {
                             <span className="relative z-10 flex items-center">View Projects <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" /></span>
                         </motion.a>
                         <motion.a
-                            href="/LatestCV.pdf"
+                            href="https://drive.google.com/file/d/1gFjB_78f4Xa6PT7j4p1Wvoca--pF6H24/view?usp=sharing"
                             target="_blank"
                             rel="noreferrer"
                             whileHover={{ scale: 1.05, boxShadow: "0 0 15px rgba(255,255,255,0.2)" }}
