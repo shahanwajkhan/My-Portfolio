@@ -1,0 +1,13 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# System Files
+.DS_Store
+Thumbs.db
+
+# Environment & Temp Files
+.env
+.env.local
+*.log
+scratch/
