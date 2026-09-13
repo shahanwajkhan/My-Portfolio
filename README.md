@@ -12,7 +12,7 @@
   [![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com)
   [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
 
-  [**🌐 View Live Portfolio**](https://skhan.vercel.app/) &nbsp;•&nbsp; [**💬 Get in Touch**](mailto:shahanwajkhan@gmail.com)
+  [**🌐 View Live Portfolio**](https://my-portfolio-shahanwajkhan.vercel.app/) &nbsp;•&nbsp; [**💬 Get in Touch**](mailto:shahanwajkhan@gmail.com)
 
 </div>
 
@@ -116,6 +116,6 @@ MyPortfolio/
 
   **Designed & Developed by Shahanwaj Khan**
   
-  [Website](https://skhan.vercel.app/) • [GitHub](https://github.com/shahanwajkhan) • [LinkedIn](https://linkedin.com/in/shahanwaj-khan)
+  [Website](https://my-portfolio-shahanwajkhan.vercel.app/) • [GitHub](https://github.com/shahanwajkhan) • [LinkedIn](https://linkedin.com/in/shahanwaj-khan)
 
 </div>
