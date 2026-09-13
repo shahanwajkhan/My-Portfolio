@@ -1,0 +1,1722 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shahanwaj Khan | Full Stack Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Shahanwaj Khan, a Full Stack Developer specializing in React.js, Django, MERN Stack, and AI-integrated applications.">
+    <meta name="keywords" content="Shahanwaj Khan, Full Stack Developer, Software Developer, Lovely Professional University, Portfolio, React, Django, Node.js">
+    <meta name="author" content="Shahanwaj Khan">
+
+    <!-- Preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Load Premium Typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Early theme init script to prevent page flash of light theme -->
+    <script>
+        (function() {
+            const savedTheme = localStorage.getItem('theme');
+            const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            if (savedTheme === 'dark' || (!savedTheme && systemPrefersDark)) {
+                document.documentElement.classList.add('dark-theme');
+            }
+        })();
+    </script>
+</head>
+<body>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress-container" aria-hidden="true">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-wrap">
+            <h1 class="preloader-title font-bebas">SHAHANWAJ KHAN</h1>
+            <p class="preloader-subtitle font-cormorant">FULL STACK DEVELOPER</p>
+            <div class="preloader-line">
+                <div class="preloader-progress" id="preloaderProgress"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation Bar -->
+    <header class="navbar" id="navbar">
+        <div class="nav-container">
+        <a href="#home" class="nav-logo font-cormorant cursor-hover" aria-label="Shahanwaj Khan Home">Shahanwaj.</a>
+
+            <div class="nav-right-group">
+                <nav class="nav-menu" id="navMenu" aria-label="Main Navigation">
+                    <ul class="nav-list">
+                        <li><a href="#home" class="nav-link active cursor-hover">Home</a></li>
+                        <li><a href="#about" class="nav-link cursor-hover">About</a></li>
+                        <li><a href="#skills" class="nav-link cursor-hover">Skills</a></li>
+                        <li><a href="#projects" class="nav-link cursor-hover">Projects</a></li>
+                        <li><a href="#certifications" class="nav-link cursor-hover">Certifications</a></li>
+                        <li><a href="#achievements" class="nav-link cursor-hover">Achievements</a></li>
+                        <li><a href="#contact" class="nav-link cursor-hover">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="nav-actions">
+                    <button id="themeToggle" class="theme-toggle-btn cursor-hover" aria-label="Toggle Dark/Light Mode">
+                        <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                        <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+                    </button>
+                    <a href="#contact" class="btn-talk btn-magnetic cursor-hover" aria-label="Contact Shahanwaj">Contact</a>
+                    <button class="nav-toggle cursor-hover" id="navToggle" aria-expanded="false" aria-controls="navMenu" aria-label="Toggle navigation menu">
+                        <span class="bar bar-1"></span>
+                        <span class="bar bar-2"></span>
+                        <span class="bar bar-3"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section" id="home" aria-label="Hero Section">
+            <div class="hero-bg-glow-left" aria-hidden="true"></div>
+            <div class="hero-bg-glow-right" aria-hidden="true"></div>
+            
+            <!-- Hero Header Meta Info -->
+            <div class="hero-header-meta">
+                <!-- Symmetrical Left Badge -->
+                <div class="availability-badge" data-reveal="fade-up">
+                    <span class="status-dot"></span>
+                    <span class="badge-text">Available for new opportunities</span>
+                </div>
+            </div>
+
+            <!-- Hero Main Interactive Layer -->
+            <div class="hero-main-container">
+                <!-- Large Background Headline split across left and right -->
+                <h1 class="hero-bg-text font-cormorant italic" data-reveal="fade-up" id="heroBgText">
+                    <span class="bg-text-left">Hey,</span>
+                    <span class="bg-text-right">there!</span>
+                </h1>
+
+                <!-- Overlapping Centered Portrait Area -->
+                <div class="hero-portrait-wrapper" data-reveal="scale-up" id="heroPortraitWrapper">
+                    <div class="hero-portrait-inner">
+                        <img src="assets/profile.png" alt="Shahanwaj Khan Portrait Cutout" class="hero-profile-img" id="heroProfileImg">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hero Bottom Content -->
+            <div class="hero-footer-content">
+                <div class="hero-left-name" data-reveal="fade-up" data-delay="200">
+                    <h2 class="bold-title font-bebas">I AM<br>SHAHANWAJ<br>KHAN</h2>
+                    <a href="#projects" class="btn-hero-cta btn-magnetic cursor-hover">View My Work</a>
+                </div>
+
+                <div class="hero-right-role" data-reveal="fade-up" data-delay="200">
+                    <div class="right-role-container">
+                        <h2 class="bold-title font-bebas">FULL STACK<br>DEVELOPER</h2>
+                        <a href="assets/resume.pdf" download="Shahanwaj_Khan_Resume.pdf" class="btn-hero-cta btn-magnetic cursor-hover">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <a href="#about" class="scroll-indicator cursor-hover" aria-label="Scroll Down to About Section">
+                <span class="scroll-line"></span>
+                <span class="scroll-label font-bebas">SCROLL</span>
+            </a>
+
+            <!-- Vertically Stacked Social Icons Right corner -->
+            <div class="hero-social-sidebar" data-reveal="fade-up" data-delay="400">
+                <a href="https://github.com/shahanwajkhan" target="_blank" rel="noopener noreferrer" class="social-icon-btn cursor-hover" aria-label="GitHub Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                </a>
+                <a href="https://www.linkedin.com/in/skhan234/" target="_blank" rel="noopener noreferrer" class="social-icon-btn cursor-hover" aria-label="LinkedIn Profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                </a>
+                <a href="mailto:shahanwajk581@gmail.com" class="social-icon-btn cursor-hover" aria-label="Email Me">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                </a>
+            </div>
+        </section>
+
+        <!-- About Me Section (01) -->
+        <section class="about-section" id="about">
+            <div class="container">
+                <!-- 1. SECTION INTRODUCTION -->
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-number font-cormorant italic">01 / ABOUT</span>
+                    <h2 class="section-heading font-bebas">BEYOND <span class="font-cormorant italic low-case">the code.</span></h2>
+                </div>
+
+                <!-- 2. STRONG OPENING STATEMENT -->
+                <div class="about-opening-statement" data-reveal="fade-up" data-delay="100">
+                    <h3 class="about-statement-text">
+                        <span class="about-line-word">I DON'T JUST <span class="about-serif-hl font-cormorant italic">WRITE CODE.</span></span>
+                        <span class="about-line-word">I <span class="about-serif-hl font-cormorant italic">BUILD SYSTEMS</span> THAT <span class="about-serif-hl font-cormorant italic">SOLVE PROBLEMS.</span></span>
+                    </h3>
+                </div>
+
+                <!-- 3. PERSONAL INTRODUCTION -->
+                <div class="about-personal-intro">
+                    <div class="about-personal-grid">
+                        <div class="about-personal-left" data-reveal="fade-up">
+                            <p class="about-personal-para">
+                                I’m Shahanwaj Khan, a Computer Science Engineering student at Lovely Professional University and a Full Stack Developer who enjoys turning complex ideas into practical digital products.
+                            </p>
+                            <p class="about-personal-para">
+                                My work sits at the intersection of web development, artificial intelligence, and problem-solving. I enjoy building technology that solves real problems—not just something that looks good on a screen.
+                            </p>
+                        </div>
+                        <div class="about-personal-right" data-reveal="fade-up" data-delay="150">
+                            <p class="about-personal-para">
+                                I work across the stack, from crafting responsive interfaces to designing backend logic, databases, APIs, and AI-powered features. I’m constantly experimenting, learning, and asking one question:
+                            </p>
+                            <blockquote class="about-distinct-quote font-cormorant italic" data-reveal="fade-up">
+                                “Can this be built better?”
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 4. DEVELOPER DNA -->
+                <div class="about-dna-section">
+                    <h4 class="about-sub-heading font-bebas" data-reveal="fade-up">MY DEVELOPER DNA</h4>
+                    <div class="about-dna-list">
+                        <div class="about-dna-row" data-reveal="fade-up" data-delay="100">
+                            <div class="about-dna-left">
+                                <span class="about-dna-number font-cormorant italic">01</span>
+                                <span class="about-dna-action">I THINK</span>
+                            </div>
+                            <div class="about-dna-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                            <div class="about-dna-right">
+                                <span class="about-dna-result">Problem First</span>
+                            </div>
+                        </div>
+
+                        <div class="about-dna-row" data-reveal="fade-up" data-delay="150">
+                            <div class="about-dna-left">
+                                <span class="about-dna-number font-cormorant italic">02</span>
+                                <span class="about-dna-action">I DESIGN</span>
+                            </div>
+                            <div class="about-dna-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                            <div class="about-dna-right">
+                                <span class="about-dna-result">User First</span>
+                            </div>
+                        </div>
+
+                        <div class="about-dna-row" data-reveal="fade-up" data-delay="200">
+                            <div class="about-dna-left">
+                                <span class="about-dna-number font-cormorant italic">03</span>
+                                <span class="about-dna-action">I BUILD</span>
+                            </div>
+                            <div class="about-dna-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                            <div class="about-dna-right">
+                                <span class="about-dna-result">Full Stack</span>
+                            </div>
+                        </div>
+
+                        <div class="about-dna-row" data-reveal="fade-up" data-delay="250">
+                            <div class="about-dna-left">
+                                <span class="about-dna-number font-cormorant italic">04</span>
+                                <span class="about-dna-action">I EXPERIMENT</span>
+                            </div>
+                            <div class="about-dna-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                            <div class="about-dna-right">
+                                <span class="about-dna-result">AI + New Technology</span>
+                            </div>
+                        </div>
+
+                        <div class="about-dna-row" data-reveal="fade-up" data-delay="300">
+                            <div class="about-dna-left">
+                                <span class="about-dna-number font-cormorant italic">05</span>
+                                <span class="about-dna-action">I IMPROVE</span>
+                            </div>
+                            <div class="about-dna-arrow">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            </div>
+                            <div class="about-dna-right">
+                                <span class="about-dna-result">One Iteration at a Time</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <!-- 6. RIGHT NOW -->
+                <div class="about-right-now-section">
+                    <div class="about-right-now-header" data-reveal="fade-up">
+                        <h4 class="about-sub-heading font-bebas">RIGHT NOW</h4>
+                        <span class="about-live-indicator">
+                            <span class="about-live-dot"></span>
+                            <span class="about-live-text font-cormorant italic">Live Status</span>
+                        </span>
+                    </div>
+
+                    <div class="about-status-bento">
+                        <!-- Bento Block 1: Location (Tall Block) -->
+                        <div class="about-bento-card about-bento-tall bento-location cursor-hover" data-reveal="fade-up" data-delay="100">
+                            <div class="about-bento-bg-accent"></div>
+                            <div class="about-bento-header">
+                                <div class="about-bento-icon pin-float">📍</div>
+                                <span class="about-status-label">BASED IN</span>
+                            </div>
+                            <div class="about-bento-body">
+                                <span class="about-status-value main-value">India</span>
+                                
+                                <!-- Interactive Radar Screen -->
+                                <div class="about-radar-container">
+                                    <div class="about-radar-sweep"></div>
+                                    <div class="about-radar-ring ring-1"></div>
+                                    <div class="about-radar-ring ring-2"></div>
+                                    <div class="about-radar-ring ring-3"></div>
+                                    <div class="about-radar-blip"></div>
+                                    <div class="about-radar-coordinates">20.5937° N, 78.9629° E</div>
+                                </div>
+
+                                <p class="about-bento-hint">Available for remote contracts and worldwide relocation.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bento Block 2: Current Focus (Wide Block) -->
+                        <div class="about-bento-card about-bento-wide bento-focus cursor-hover" data-reveal="fade-up" data-delay="150">
+                            <div class="about-bento-bg-accent"></div>
+                            <div class="about-bento-header">
+                                <div class="about-bento-icon pulsing-indicator">🎓</div>
+                                <span class="about-status-label">CURRENT STATUS</span>
+                            </div>
+                            <div class="about-bento-body bento-split-body">
+                                <div class="bento-split-col">
+                                    <span class="about-bento-sub-label">STUDYING</span>
+                                    <span class="about-status-value">Computer Science Engineering</span>
+                                    <span class="about-bento-sub-desc">Lovely Professional University</span>
+                                </div>
+                                <div class="bento-split-divider"></div>
+                                <div class="bento-split-col">
+                                    <span class="about-bento-sub-label">BUILDING</span>
+                                    <span class="about-status-value">AI-powered web applications</span>
+                                    <span class="about-bento-sub-desc">Integrating LLMs with custom workflows</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Bento Block 3: Mindset & Exploring -->
+                        <div class="about-bento-card bento-exploring cursor-hover" data-reveal="fade-up" data-delay="200">
+                            <div class="about-bento-bg-accent"></div>
+                            <div class="about-bento-header">
+                                <div class="about-bento-icon">🧠</div>
+                                <span class="about-status-label">EXPLORING</span>
+                            </div>
+                            <div class="about-bento-body">
+                                <span class="about-status-value">AI + Full Stack Development</span>
+                                <p class="about-bento-hint">Unifying deep learning APIs with responsive web stacks.</p>
+                            </div>
+                        </div>
+
+                        <!-- Bento Block 4: Looking For (Accent Block) -->
+                        <div class="about-bento-card bento-looking about-bento-highlight cursor-hover" data-reveal="fade-up" data-delay="250">
+                            <div class="about-bento-bg-accent"></div>
+                            <div class="about-bento-header">
+                                <div class="about-bento-icon">🎯</div>
+                                <span class="about-status-label">LOOKING FOR</span>
+                            </div>
+                            <div class="about-bento-body">
+                                <span class="about-status-value highlight-value">Software Development Opportunities</span>
+                                <p class="about-bento-hint">Open to Full-Time roles & Winter Internships.</p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <!-- 7. CLOSING STATEMENT -->
+                <div class="about-closing-statement" data-reveal="fade-up">
+                    <h3 class="about-closing-text">
+                        <span class="about-closing-sub font-sans">I’M NOT TRYING TO KNOW</span>
+                        <span class="about-closing-huge font-display font-bebas">EVERY TECHNOLOGY.</span>
+                        <span class="about-closing-sub italic-closing font-cormorant italic">I’M LEARNING HOW TO BUILD</span>
+                        <span class="about-closing-huge font-sans">ANYTHING I CAN IMAGINE.</span>
+                    </h3>
+                </div>
+            </div>
+        </section>
+                   <!-- Skills Section (02) -->
+        <section class="skills-section" id="skills">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-number font-cormorant italic">02 / SKILLS & TECHNOLOGIES</span>
+                </div>
+
+                <!-- Animated Tech Marquee -->
+                <div class="skills-marquee-container" aria-hidden="true">
+                    <div class="skills-marquee">
+                        <div class="marquee-track">
+                            <span class="font-bebas">REACT.JS</span>
+                            <span class="marquee-dot"></span>
+                            <span class="font-bebas">DJANGO</span>
+                            <span class="marquee-dot"></span>
+                            <span class="font-bebas">NODE.JS</span>
+                            <span class="marquee-dot"></span>
+                            <span class="font-bebas">MERN STACK</span>
+                            <span class="marquee-dot"></span>
+                            <span class="font-bebas">AI INTEGRATION</span>
+                            <span class="marquee-dot"></span>
+                            <span class="font-bebas">PYTHON</span>
+                            <span class="marquee-dot"></span>
+                            <!-- Repeated for continuous marquee -->
+                            <span class="font-bebas">REACT.JS</span>
+                            <span class="marquee-dot"></span>
+                            <span class="font-bebas">DJANGO</span>
+                            <span class="marquee-dot"></span>
+                            <span class="font-bebas">NODE.JS</span>
+                            <span class="marquee-dot"></span>
+                            <span class="font-bebas">MERN STACK</span>
+                            <span class="marquee-dot"></span>
+                            <span class="font-bebas">AI INTEGRATION</span>
+                            <span class="marquee-dot"></span>
+                            <span class="font-bebas">PYTHON</span>
+                            <span class="marquee-dot"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Categories Grid -->
+                <!-- Skills Category Tabs -->
+                <div class="skills-tabs-container" data-reveal="fade-up">
+                    <button class="skills-tab-btn active cursor-hover" data-category="programming">Programming Languages</button>
+                    <button class="skills-tab-btn cursor-hover" data-category="frontend">Frontend Development</button>
+                    <button class="skills-tab-btn cursor-hover" data-category="backend">Backend Development</button>
+                    <button class="skills-tab-btn cursor-hover" data-category="databases">Databases</button>
+                    <button class="skills-tab-btn cursor-hover" data-category="ai-llm">AI / LLM Tools</button>
+                    <button class="skills-tab-btn cursor-hover" data-category="cloud-devops">Cloud & DevOps</button>
+                    <button class="skills-tab-btn cursor-hover" data-category="tools-platforms">Tools & Platforms</button>
+                </div>
+
+                <!-- Skills Interactive Grid -->
+                <div class="skills-grid-interactive" data-reveal="fade-up" data-delay="100">
+                    <!-- Python -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="programming" style="--skill-hover-color: #3776AB; --skill-hover-color-glow: rgba(55, 118, 171, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M11.969 0c-2.422 0-4.609.188-4.609.188s-2.734.469-2.734 2.875v2.219h7.594v1.031H1.547v.031A2.58 2.58 0 0 0 0 8.875v5.188a2.53 2.53 0 0 0 2.531 2.531h1.563v-2.25c0-2.453 2.141-4.594 4.594-4.594h7.594V7.531A2.58 2.58 0 0 0 14.75 5h-1.563V2.719C13.187.313 11.969 0 11.969 0z" style="transform-origin:center; transform:rotate(90deg);"/></svg>
+                        </div>
+                        <span class="skill-name">Python</span>
+                    </div>
+
+                    <!-- JavaScript -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="programming" style="--skill-hover-color: #F7DF1E; --skill-hover-color-glow: rgba(247, 223, 30, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M0 0h24v24H0V0zm22.034 18.268c-.156-.847-.723-1.485-1.667-1.782-.952-.3-1.99-.404-3.018-.6-.628-.118-1.266-.232-1.73-.559-.444-.317-.614-.816-.505-1.393.123-.628.714-1.02 1.607-1.02.893 0 1.379.395 1.547.925.17.525.127 1.134.127 1.766h2.512c-.002-.82-.07-1.62-.317-2.32-.472-1.353-1.609-2.01-3.413-2.01-1.536 0-2.825.688-3.262 2.068-.458 1.479.186 2.974 1.417 3.58 1.012.497 2.267.674 3.398.887.828.161 1.66.302 2.207.612.49.277.67.737.567 1.337-.156.896-.922 1.32-2.128 1.32-1.26 0-1.895-.494-2.13-1.282-.245-.816-.14-1.854-.14-2.86H12.53c-.007 1.012.043 1.953.318 2.766.47 1.393 1.68 2.213 3.655 2.213 2.582 0 4.1-1.47 4.1-3.693l-.008-.073z"/></svg>
+                        </div>
+                        <span class="skill-name">JavaScript</span>
+                    </div>
+
+                    <!-- C++ -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="programming" style="--skill-hover-color: #00599C; --skill-hover-color-glow: rgba(0, 89, 156, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10h-2a8 8 0 1 1-8-8V2zm7 9h-2V9h-2v2h-2v2h2v2h2v-2h2v-2zm4 0h-2V9h-2v2h-2v2h2v2h2v-2h2v-2z"/></svg>
+                        </div>
+                        <span class="skill-name">C++</span>
+                    </div>
+
+                    <!-- C -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="programming" style="--skill-hover-color: #A8B9CC; --skill-hover-color-glow: rgba(168, 185, 204, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10h-2a8 8 0 1 1-8-8V2z"/></svg>
+                        </div>
+                        <span class="skill-name">C</span>
+                    </div>
+
+                    <!-- Java -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="programming" style="--skill-hover-color: #E76F00; --skill-hover-color-glow: rgba(231, 111, 0, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M2 21h20v2H2v-2zm13-17c-2 2-3 4-3 7h2c0-2 1-3.5 2-5h-1zm-6 2c-1.5 1.5-2 3-2 6h2c0-2 .5-3.5 1.5-5H9zm2.5-4C10.33 3.33 9.67 5 9.67 7.5h1.66c0-2 .34-3.17 1.17-4.5h-1zM20 9.5c0-1.93-1.57-3.5-3.5-3.5H15v7h1.5c1.93 0 3.5-1.57 3.5-3.5zm-2 0c0 .83-.67 1.5-1.5 1.5H15V8h1.5c.83 0 1.5.67 1.5 1.5z"/></svg>
+                        </div>
+                        <span class="skill-name">Java</span>
+                    </div>
+
+                    <!-- React.js -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="frontend" style="--skill-hover-color: #61DAFB; --skill-hover-color-glow: rgba(97, 218, 251, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(30 12 12)" stroke="currentColor" stroke-width="1.5" fill="none"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(90 12 12)" stroke="currentColor" stroke-width="1.5" fill="none"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(150 12 12)" stroke="currentColor" stroke-width="1.5" fill="none"/></svg>
+                        </div>
+                        <span class="skill-name">React.js</span>
+                    </div>
+
+                    <!-- Next.js -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="frontend" style="--skill-hover-color: #000000; --skill-hover-color-glow: rgba(0, 0, 0, 0.15);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 12 12A12.013 12.013 0 0 0 12 0zm5.228 17.558l-5.698-7.33v6.331H10.15V7.47h1.38l5.228 6.74v-6.74h1.38v10.088z"/></svg>
+                        </div>
+                        <span class="skill-name">Next.js</span>
+                    </div>
+
+                    <!-- Vue.js -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="frontend" style="--skill-hover-color: #4FC08D; --skill-hover-color-glow: rgba(79, 192, 141, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M24 1.6L12 22.4L0 1.6h5.3L12 13.2L18.7 1.6H24zM17.4 1.6L12 11L6.6 1.6H1.9L12 19.1L22.1 1.6H17.4z"/></svg>
+                        </div>
+                        <span class="skill-name">Vue.js</span>
+                    </div>
+
+                    <!-- Tailwind CSS -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="frontend" style="--skill-hover-color: #06B6D4; --skill-hover-color-glow: rgba(6, 182, 212, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12.001 4.8c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624C13.666 10.618 15.027 12 18.001 12c3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C16.337 6.182 14.976 4.8 12.001 4.8zm-6 7.2c-3.2 0-5.2 1.6-6 4.8 1.2-1.6 2.6-2.2 4.2-1.8.913.228 1.565.89 2.288 1.624 1.177 1.194 2.538 2.576 5.512 2.576 3.2 0 5.2-1.6 6-4.8-1.2 1.6-2.6 2.2-4.2 1.8-.913-.228-1.565-.89-2.288-1.624C10.337 13.382 8.976 12 6.001 12z"/></svg>
+                        </div>
+                        <span class="skill-name">Tailwind CSS</span>
+                    </div>
+
+                    <!-- Material-UI -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="frontend" style="--skill-hover-color: #0081CB; --skill-hover-color-glow: rgba(0, 129, 203, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M0 2.475v19.05l12 6.975 12-6.975v-19.05l-12-6.975zm12 5.25l7.5 4.365v3.81l-7.5-4.365zm0 5.25l7.5 4.365v3.81l-7.5-4.365zm-7.5-5.25l7.5-4.365v3.81l-7.5 4.365zm0 5.25l7.5-4.365v3.81l-7.5 4.365z"/></svg>
+                        </div>
+                        <span class="skill-name">Material-UI</span>
+                    </div>
+
+                    <!-- Radix UI -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="frontend" style="--skill-hover-color: #8A8A8A; --skill-hover-color-glow: rgba(138, 138, 138, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-10 10h10V2zm10 10a10 10 0 0 1-10 10v-10h10zM12 12v10a10 10 0 0 1-10-10h10z"/></svg>
+                        </div>
+                        <span class="skill-name">Radix UI</span>
+                    </div>
+
+                    <!-- Bootstrap -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="frontend" style="--skill-hover-color: #7952B3; --skill-hover-color-glow: rgba(121, 82, 179, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M18.176 11.583c.123-.623.184-1.24.184-1.852 0-3.323-2.457-4.731-5.742-4.731H6.012v13.996h6.732c3.486 0 5.823-1.616 5.823-4.896 0-.877-.132-1.716-.391-2.517zM9.414 7.625h2.827c1.782 0 2.871.748 2.871 2.153 0 1.341-1.03 2.148-2.824 2.148H9.414V7.625zm3.175 11.238H9.414v-4.46h3.175c1.884 0 2.986.822 2.986 2.213.001 1.425-1.077 2.247-2.986 2.247z"/></svg>
+                        </div>
+                        <span class="skill-name">Bootstrap</span>
+                    </div>
+
+                    <!-- HTML5 / CSS3 -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="frontend" style="--skill-hover-color: #E34F26; --skill-hover-color-glow: rgba(227, 79, 38, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M1.5 0h21l-1.91 21.563L11.977 24l-8.564-2.438L1.5 0zm5.087 5.25h10.826l-.23 2.625H9.458l.232 2.625h6.634l-.618 6.93-3.729 1.03-3.74-1.03-.238-2.715H10.66l.118 1.344 1.22.33 1.217-.33.206-2.313H6.848L6.587 5.25z"/></svg>
+                        </div>
+                        <span class="skill-name">HTML5 / CSS3</span>
+                    </div>
+
+                    <!-- Node.js -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="backend" style="--skill-hover-color: #339933; --skill-hover-color-glow: rgba(51, 153, 51, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0zm9 16.5l-9 5.143-9-5.143V7.5l9-5.143 9 5.143v9z"/></svg>
+                        </div>
+                        <span class="skill-name">Node.js</span>
+                    </div>
+
+                    <!-- Express.js -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="backend" style="--skill-hover-color: #828282; --skill-hover-color-glow: rgba(130, 130, 130, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 0a12 12 0 1 0 12 12A12 12 0 0 0 12 0zm5.12 16.12l-1.42 1.42L12 13.84l-3.7 3.7-1.42-1.42 3.7-3.7-3.7-3.7 1.42-1.42 3.7 3.7 3.7-3.7 1.42 1.42-3.7 3.7z"/></svg>
+                        </div>
+                        <span class="skill-name">Express.js</span>
+                    </div>
+
+                    <!-- Django -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="backend" style="--skill-hover-color: #0C4B33; --skill-hover-color-glow: rgba(12, 75, 51, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 0L1.5 4.5v6c0 5.52 4.48 10 10.5 13.5 6.02-3.5 10.5-7.98 10.5-13.5v-6L12 0zm5.25 12h-3v4.5h-1.5V12h-3V7.5h1.5v3h3v-3h1.5v4.5z"/></svg>
+                        </div>
+                        <span class="skill-name">Django</span>
+                    </div>
+
+                    <!-- Flask -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="backend" style="--skill-hover-color: #4F4F4F; --skill-hover-color-glow: rgba(79, 79, 79, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M19 19.5v-1l-4.5-7.5V4h1V2H8.5v2h1v7l-4.5 7.5v1c0 .8.7 1.5 1.5 1.5h11c.8 0 1.5-.7 1.5-1.5zm-8-8.5V4h2v7l4 6.7H7l4-6.7z"/></svg>
+                        </div>
+                        <span class="skill-name">Flask</span>
+                    </div>
+
+                    <!-- FastAPI -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="backend" style="--skill-hover-color: #009688; --skill-hover-color-glow: rgba(0, 150, 136, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0zm0 18.5V20l-6.5-3.7V11L12 14.7v3.8zm6.5-2.2L12 20v-3.8l6.5-3.7v3.8zM12 9.2l6.5-3.7v3.8L12 13V9.2zm-6.5 1.8L12 14.7V11l-6.5-3.7v3.8z"/></svg>
+                        </div>
+                        <span class="skill-name">FastAPI</span>
+                    </div>
+
+                    <!-- REST API -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="backend" style="--skill-hover-color: #009688; --skill-hover-color-glow: rgba(0, 150, 136, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M19 12c.55 0 1-.45 1-1V5c0-1.1-.9-2-2-2h-6c-1.1 0-2 .9-2 2v2H5c-1.1 0-2 .9-2 2v6c0 1.1.9 2 2 2h6c1.1 0 2-.9 2-2v-2h5c.55 0 1-.45 1-1zM5 15V9h6v6H5zm13-5h-3V5h6v5h-3z"/></svg>
+                        </div>
+                        <span class="skill-name">REST API</span>
+                    </div>
+
+                    <!-- JWT Authentication -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="backend" style="--skill-hover-color: #FB015B; --skill-hover-color-glow: rgba(251, 1, 91, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 6c1.4 0 2.5 1.1 2.5 2.5V11c.8 0 1.5.7 1.5 1.5v4c0 .8-.7 1.5-1.5 1.5h-5c-.8 0-1.5-.7-1.5-1.5v-4c0-.8.7-1.5 1.5-1.5v-1.5C9.5 8.1 10.6 7 12 7zm0 1.5c-.6 0-1 .4-1 1V11h2v-1.5c0-.6-.4-1-1-1z"/></svg>
+                        </div>
+                        <span class="skill-name">JWT Authentication</span>
+                    </div>
+
+                    <!-- MongoDB -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="databases" style="--skill-hover-color: #47A248; --skill-hover-color-glow: rgba(71, 162, 72, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4 2 6.5s4.48 4.5 10 4.5 10-2 10-4.5S17.52 2 12 2zm0 7C7.58 9 4 7.88 4 6.5S7.58 4 12 4s8 1.12 8 2.5S16.42 9 12 9zm0 3c-5.52 0-10-1.5-10-3.5v5c0 2 4.48 3.5 10 3.5s10-1.5 10-3.5v-5c0 2-4.48 3.5-10 3.5zm0 5c-5.52 0-10-1.5-10-3.5v5c0 2 4.48 3.5 10 3.5s10-1.5 10-3.5v-5c0 2-4.48 3.5-10 3.5z"/></svg>
+                        </div>
+                        <span class="skill-name">MongoDB</span>
+                    </div>
+
+                    <!-- MySQL -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="databases" style="--skill-hover-color: #00758F; --skill-hover-color-glow: rgba(0, 117, 143, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4 2 6.5s4.48 4.5 10 4.5 10-2 10-4.5S17.52 2 12 2zm0 7C7.58 9 4 7.88 4 6.5S7.58 4 12 4s8 1.12 8 2.5S16.42 9 12 9zm0 3c-5.52 0-10-1.5-10-3.5v5c0 2 4.48 3.5 10 3.5s10-1.5 10-3.5v-5c0 2-4.48 3.5-10 3.5zm0 5c-5.52 0-10-1.5-10-3.5v5c0 2 4.48 3.5 10 3.5s10-1.5 10-3.5v-5c0 2-4.48 3.5-10 3.5z"/></svg>
+                        </div>
+                        <span class="skill-name">MySQL</span>
+                    </div>
+
+                    <!-- PostgreSQL -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="databases" style="--skill-hover-color: #336791; --skill-hover-color-glow: rgba(51, 103, 145, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4 2 6.5s4.48 4.5 10 4.5 10-2 10-4.5S17.52 2 12 2zm0 7C7.58 9 4 7.88 4 6.5S7.58 4 12 4s8 1.12 8 2.5S16.42 9 12 9zm0 3c-5.52 0-10-1.5-10-3.5v5c0 2 4.48 3.5 10 3.5s10-1.5 10-3.5v-5c0 2-4.48 3.5-10 3.5zm0 5c-5.52 0-10-1.5-10-3.5v5c0 2 4.48 3.5 10 3.5s10-1.5 10-3.5v-5c0 2-4.48 3.5-10 3.5z"/></svg>
+                        </div>
+                        <span class="skill-name">PostgreSQL</span>
+                    </div>
+
+                    <!-- Firebase -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="databases" style="--skill-hover-color: #FFCA28; --skill-hover-color-glow: rgba(255, 202, 40, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M3.89 15.75L2.12 6.07a.5.5 0 0 1 .83-.46l2.94 2.92zm17.99-1.92l-2.92-5.46a.5.5 0 0 0-.85 0L12 19.57zM12.93 2.1a.5.5 0 0 0-.86 0L9.12 7.78l3.81 3.82zM21 21H3a1 1 0 0 1-1-1v-.5L11.5 2.5a.5.5 0 0 1 .86 0L22 19.5v.5a1 1 0 0 1-1 1z"/></svg>
+                        </div>
+                        <span class="skill-name">Firebase</span>
+                    </div>
+
+                    <!-- SQLite -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="databases" style="--skill-hover-color: #003B57; --skill-hover-color-glow: rgba(0, 59, 87, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 4 2 6.5s4.48 4.5 10 4.5 10-2 10-4.5S17.52 2 12 2zm0 7C7.58 9 4 7.88 4 6.5S7.58 4 12 4s8 1.12 8 2.5S16.42 9 12 9zm0 3c-5.52 0-10-1.5-10-3.5v5c0 2 4.48 3.5 10 3.5s10-1.5 10-3.5v-5c0 2-4.48 3.5-10 3.5zm0 5c-5.52 0-10-1.5-10-3.5v5c0 2 4.48 3.5 10 3.5s10-1.5 10-3.5v-5c0 2-4.48 3.5-10 3.5z"/></svg>
+                        </div>
+                        <span class="skill-name">SQLite</span>
+                    </div>
+
+                    <!-- OpenAI API -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="ai-llm" style="--skill-hover-color: #10A37F; --skill-hover-color-glow: rgba(16, 163, 127, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M21.3 11.1c.2-1 .1-2-.4-2.9-.5-.9-1.3-1.6-2.3-1.9.1-.5.1-1 0-1.5-.1-.7-.4-1.3-.8-1.8-.4-.5-1-.9-1.6-1.1-.6-.2-1.3-.3-1.9-.2-.6.1-1.2.4-1.7.8a4.9 4.9 0 0 0-3.3-1.3c-.9 0-1.8.3-2.6.8-.7.5-1.3 1.2-1.6 2.1-.5-.1-1.1 0-1.6.1-.7.2-1.3.5-1.8 1-.5.4-.8 1-1 1.6-.2.6-.3 1.3-.2 1.9-.1.5-.4 1-.8 1.5-.5.7-.7 1.6-.7 2.5s.4 1.7.9 2.4c-.1.5-.1 1 0 1.5-.1.7-.4 1.3-.8 1.8-.4.5-1 .9-1.6 1.1-.6.2-1.3.3-1.9.2-.6-.1-1.2-.4-1.7-.8a4.9 4.9 0 0 0 3.3 1.3c.9 0 1.8-.3 2.6-.8.7-.5 1.3-1.2 1.6-2.1.5.1 1.1 0 1.6-.1.7-.2 1.3-.5 1.8-1s.8-1 1-1.6c.2-.6.3-1.3.2-1.9.1-.5.4-1 .8-1.5.6-.7.8-1.6.8-2.5 0-.9-.3-1.8-.8-2.5zm-8.8 8.8c-.4.2-.8.3-1.3.3s-.9-.1-1.3-.3L5.4 17c-.4-.2-.7-.6-.9-1s-.2-.9 0-1.4l.1-.2.2.1 4.5 2.6c.3.2.7.3 1.1.3s.8-.1 1.1-.3l3.9-2.3 1.3.8-3.2 1.9zm-3.8-5c-.2-.4-.3-.8-.3-1.3s.1-.9.3-1.3l4.5-2.6c.4-.2.9-.2 1.3 0s.7.6.9 1l4.5 2.6c.2.4.3.8.3 1.3s-.1.9-.3 1.3l-4.5 2.6c-.4.2-.9.2-1.3 0s-.7-.6-.9-1L8.7 14.9z"/></svg>
+                        </div>
+                        <span class="skill-name">OpenAI API</span>
+                    </div>
+
+                    <!-- Gemini API -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="ai-llm" style="--skill-hover-color: #1A73E8; --skill-hover-color-glow: rgba(26, 115, 232, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 0l3 9 9 3-9 3-3 9-3-9-9-3 9-3 3-9z"/></svg>
+                        </div>
+                        <span class="skill-name">Gemini API</span>
+                    </div>
+
+                    <!-- Prompt Engineering -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="ai-llm" style="--skill-hover-color: #E65F2C; --skill-hover-color-glow: rgba(230, 95, 44, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+                        </div>
+                        <span class="skill-name">Prompt Engineering</span>
+                    </div>
+
+                    <!-- Docker -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="cloud-devops" style="--skill-hover-color: #2496ED; --skill-hover-color-glow: rgba(36, 150, 237, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M13.983 8.871h-1.996V6.885h1.996v1.986zm-2.482 0H9.507V6.885h1.994v1.986zm-2.49 0H7.016V6.885h1.997v1.986zm-2.49 0H4.524V6.885h1.997v1.986zm2.49-2.474h-1.994V4.412h1.994V6.397zm-2.49 0H4.524V4.412h1.997V6.397zm-2.49 4.949h-1.995V9.356h1.995v1.99zm2.49 0H4.524V9.356h1.997v1.99zm-2.49-2.474H2.03V6.885h1.995v1.986zm17.138 2.213c.12.08.252.194.397.346.462.484.861 1.07 1.159 1.777.29.689.431 1.499.431 2.458 0 1.253-.315 2.267-.936 2.971-.624.706-1.579 1.066-2.83 1.066-1.258 0-2.317-.426-3.11-1.253-1.026-1.065-2.022-2.146-2.99-3.243-.443-.5-.909-1.01-1.39-1.536H1.999v1.989c0 .762.613 1.385 1.381 1.385h11.724c.768 0 1.381-.623 1.381-1.385V10.8c.844-.015 1.722.186 2.653.535z"/></svg>
+                        </div>
+                        <span class="skill-name">Docker</span>
+                    </div>
+
+                    <!-- AWS -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="cloud-devops" style="--skill-hover-color: #FF9900; --skill-hover-color-glow: rgba(255, 153, 0, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M13.25 15.6c-.72.63-1.78.9-2.6.9-.96 0-1.83-.34-2.36-.96-.46-.54-.6-1.24-.6-2.17 0-1.23.36-2.07 1.07-2.6.66-.51 1.7-.65 2.66-.65h1.83v1c-.26-.82-1.06-1.3-2.17-1.3-.92 0-1.7.35-2.1 1-.3.51-.43 1.25-.43 2.12 0 1 .18 1.69.52 2.13.38.5 1 .74 1.78.74.88 0 1.6-.33 2.05-.8v-.4h-1.55v-.93h2.9v4.22H13.8v-.23zM22 20.32c-3.1 2.2-7.53 3.18-11.4 3.18-5.32 0-10.05-1.84-13.6-5a.43.43 0 0 1-.03-.64L.6 14.77a.38.38 0 0 1 .53 0c3.2 2.8 7.37 4.5 11.83 4.5 3.32 0 7.07-.94 9.87-2.73a.4.4 0 0 1 .54.1l1.1 1.48a.4.4 0 0 1-.47.66z"/></svg>
+                        </div>
+                        <span class="skill-name">AWS</span>
+                    </div>
+
+                    <!-- Vercel -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="cloud-devops" style="--skill-hover-color: #000000; --skill-hover-color-glow: rgba(0, 0, 0, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M24 22.525H0L12 1.745z"/></svg>
+                        </div>
+                        <span class="skill-name">Vercel</span>
+                    </div>
+
+                    <!-- Git -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="tools-platforms" style="--skill-hover-color: #F05032; --skill-hover-color-glow: rgba(240, 80, 50, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M22.65 10.35L13.65 1.35a1.9 1.9 0 0 0-2.7 0l-2 2 3.1 3.1a2.9 2.9 0 0 1 4.2 0 2.9 2.9 0 0 1 0 4.2l-3.1 3.1a3 3 0 0 1-4.5-4.2l-2-2-5.3 5.3a1.9 1.9 0 0 0 0 2.7l9 9a1.9 1.9 0 0 0 2.7 0l9-9a1.9 1.9 0 0 0 0-2.7z"/></svg>
+                        </div>
+                        <span class="skill-name">Git</span>
+                    </div>
+
+                    <!-- GitHub -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="tools-platforms" style="--skill-hover-color: #181717; --skill-hover-color-glow: rgba(24, 23, 23, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </div>
+                        <span class="skill-name">GitHub</span>
+                    </div>
+
+                    <!-- VS Code -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="tools-platforms" style="--skill-hover-color: #007ACC; --skill-hover-color-glow: rgba(0, 122, 204, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M23.9 6.5l-2.6-2.4c-.2-.2-.6-.2-.8 0L12 11.2l-3.3-3c-.2-.2-.6-.2-.8 0L.1 14.5c-.2.2-.2.6 0 .8l2.6 2.4c.2.2 .6.2.8 0L12 12.8l3.3 3c.2.2.6.2.8 0l7.8-6.3c.2-.2.2-.6 0-.8z"/></svg>
+                        </div>
+                        <span class="skill-name">VS Code</span>
+                    </div>
+
+                    <!-- Postman -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="tools-platforms" style="--skill-hover-color: #FF6C37; --skill-hover-color-glow: rgba(255, 108, 55, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 0L2 22h20L12 0zm0 4l6.5 14.3H5.5L12 4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
+                        </div>
+                        <span class="skill-name">Postman</span>
+                    </div>
+
+                    <!-- Canva -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="tools-platforms" style="--skill-hover-color: #25C1C9; --skill-hover-color-glow: rgba(37, 193, 201, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0 0 18c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.76-.39-1.04a.27.27 0 0 1-.06-.17c0-.15.12-.27.27-.27H15a6 6 0 0 0 6-6c0-4.97-4.03-9-9-9zm-5.5 9a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3-3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm3 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z"/></svg>
+                        </div>
+                        <span class="skill-name">Canva</span>
+                    </div>
+
+                    <!-- Figma -->
+                    <div class="skill-card-interactive cursor-hover" data-categories="tools-platforms" style="--skill-hover-color: #F24E1E; --skill-hover-color-glow: rgba(242, 78, 30, 0.25);">
+                        <div class="skill-icon-wrapper">
+                            <svg viewBox="0 0 24 24"><path d="M8 24c2.2 0 4-1.8 4-4v-4H8c-2.2 0-4 1.8-4 4s1.8 4 4 4zm0-12c-2.2 0-4-1.8-4-4s1.8-4 4-4h4v8H8zm4 0V4c0-2.2 1.8-4 4-4s4 1.8 4 4s-1.8 4-4 4h-4zm4 4c2.2 0 4 1.8 4 4s-1.8 4-4 4h-4v-8h4zm0-4h4c2.2 0 4-1.8 4-4s-1.8-4-4-4s-4 1.8-4 4v4z"/></svg>
+                        </div>
+                        <span class="skill-name">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Selected Work / Projects Section (03) -->
+        <section class="projects-section" id="projects">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-number font-cormorant italic">03 / PROJECTS</span>
+                    <h2 class="section-heading font-bebas">SELECTED <span class="font-cormorant italic low-case">work.</span></h2>
+                </div>
+
+                <!-- Projects List -->
+                <div class="projects-list">
+                    
+                                    <!-- Project Item 1 -->
+                    <article class="project-card flex-row" data-reveal="fade-up">
+                        <div class="project-image-side cursor-hover">
+                            <div class="project-img-container">
+                                <img src="assets/project-1.jpg" alt="SkillGuard AI Platform Dashboard mockup" class="project-img">
+                            </div>
+                        </div>
+                        <div class="project-text-side">
+                            <span class="project-card-num font-cormorant italic">01 / 12</span>
+                            <h3 class="project-card-title font-bebas">SkillGuard AI</h3>
+                            <p class="project-card-desc">
+                                An AI-powered career and assessment platform with Student and Recruiter modes. Features AI-driven skill assessments, mock interviews, proctored examinations, confidence analysis, automated performance reports, personalized learning roadmaps, and recruiter-focused candidate evaluation.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Gemini API</span>
+                                <span class="tech-tag">Groq API</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/shahanwajkhan/SkillGuard-AI" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                    <span>GitHub</span>
+                                    <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                                </a>
+                                <a href="https://skill-guard-ai.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                    <span>Live Demo</span>
+                                    <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+ 
+                    <!-- Project Item 2 -->
+                    <article class="project-card flex-row-reverse" data-reveal="fade-up">
+                        <div class="project-image-side cursor-hover">
+                            <div class="project-img-container">
+                                <img src="assets/project-2.jpg" alt="University Management System Mockup" class="project-img">
+                            </div>
+                        </div>
+                        <div class="project-text-side">
+                            <span class="project-card-num font-cormorant italic">02 / 12</span>
+                            <h3 class="project-card-title font-bebas">University Management System</h3>
+                            <p class="project-card-desc">
+                                A digital platform that manages students, faculty, courses, attendance, fees, and results in one place. It streamlines academic and administrative tasks, improves communication, ensures secure access, and supports efficient, paperless campus operations.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">Django</span>
+                                <span class="tech-tag">SQLite</span>
+                                <span class="tech-tag">Bootstrap</span>
+                                <span class="tech-tag">HTML5</span>
+                                <span class="tech-tag">CSS3</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/shahanwajkhan/University-Management-System" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                    <span>GitHub</span>
+                                    <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                                </a>
+                                <a href="https://ums-project.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                    <span>Live Demo</span>
+                                    <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+ 
+                    <!-- Project Item 3 -->
+                    <article class="project-card flex-row" data-reveal="fade-up">
+                        <div class="project-image-side cursor-hover">
+                            <div class="project-img-container">
+                                <img src="assets/project-3.jpg" alt="Cricket Management System Sports Dashboard Mockup" class="project-img">
+                            </div>
+                        </div>
+                        <div class="project-text-side">
+                            <span class="project-card-num font-cormorant italic">03 / 12</span>
+                            <h3 class="project-card-title font-bebas">Cricket Management System</h3>
+                            <p class="project-card-desc">
+                                A MERN stack application for managing cricket teams, players, matches, scores, and tournament-related information with live updates and dynamic query search.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Express.js</span>
+                                <span class="tech-tag">React.js</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">Socket.io</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/shahanwajkhan/Cricket-Management-System" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                    <span>GitHub</span>
+                                    <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                                </a>
+                                <a href="https://cricket-hub-y63h.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                    <span>Live Demo</span>
+                                    <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+ 
+                    <!-- Project Item 4 -->
+                    <article class="project-card flex-row-reverse" data-reveal="fade-up">
+                        <div class="project-image-side cursor-hover">
+                            <div class="project-img-container">
+                                <img src="assets/project-4.jpg" alt="FarmTech MIS Agriculture Platform Mockup" class="project-img">
+                            </div>
+                        </div>
+                        <div class="project-text-side">
+                            <span class="project-card-num font-cormorant italic">04 / 12</span>
+                            <h3 class="project-card-title font-bebas">FarmTech MIS</h3>
+                            <p class="project-card-desc">
+                                A smart agriculture management platform for Farmers, SHGs, and FPOs/FPGs featuring crop advisory, AI-based scheme recommendations, marketplace integration, GIS farmer mapping, yield prediction, inventory management, logistics, equipment rental, and real-time analytics.
+                            </p>
+                            <div class="project-tech-stack">
+                                <span class="tech-tag">Laravel</span>
+                                <span class="tech-tag">PHP</span>
+                                <span class="tech-tag">Tailwind CSS</span>
+                                <span class="tech-tag">MongoDB</span>
+                                <span class="tech-tag">Gemini API</span>
+                                <span class="tech-tag">Leaflet.js</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/shahanwajkhan/FarmTech-MIS" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                    <span>GitHub</span>
+                                    <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                                </a>
+                                <a href="https://farm-tech-mis.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                    <span>Live Demo</span>
+                                    <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Separator and Secondary Projects Header -->
+                <div class="projects-section-separator" data-reveal="fade-up"></div>
+                <h3 class="secondary-projects-heading font-bebas" data-reveal="fade-up">More <span class="font-cormorant italic low-case">notable projects.</span></h3>
+
+                <!-- Secondary Projects Grid -->
+                <div class="projects-grid-secondary" data-reveal="fade-up">
+                    
+                    <!-- Project Item 5: FinSight -->
+                    <div class="project-card-secondary" data-reveal="fade-up">
+                        <span class="project-card-secondary-num font-cormorant italic">05 / 12</span>
+                        <h4 class="project-card-secondary-title font-bebas">FinSight Finance Dashboard</h4>
+                        <p class="project-card-secondary-desc">
+                            A modern financial monitoring dashboard to track income, expenses, and transaction logs. Integrates responsive interactive charts, data filtering, and role-based access.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">React.js</span>
+                            <span class="tech-tag">Tailwind CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Chart.js</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shahanwajkhan/FinSight" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>GitHub</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                            <a href="https://fin-sight-orcin.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>Live Demo</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 6: Saree Palace -->
+                    <div class="project-card-secondary" data-reveal="fade-up">
+                        <span class="project-card-secondary-num font-cormorant italic">06 / 12</span>
+                        <h4 class="project-card-secondary-title font-bebas">Saree Palace Storefront</h4>
+                        <p class="project-card-secondary-desc">
+                            An elegant luxury e-commerce boutique storefront showcasing artisanal silks. Features catalog search, sliding cart drawer, and user loyalty portal with phone OTP validation.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">OTP API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shahanwajkhan/Saree-Palace" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>GitHub</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                            <a href="https://saree-palace-eight.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>Live Demo</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 7: Weather & Packaging Planner -->
+                    <div class="project-card-secondary" data-reveal="fade-up">
+                        <span class="project-card-secondary-num font-cormorant italic">07 / 12</span>
+                        <h4 class="project-card-secondary-title font-bebas">Weather & Packing Planner</h4>
+                        <p class="project-card-secondary-desc">
+                            An intelligent weather forecasting and travel packing assistant that delivers real-time meteorological insights and dynamically generates personalized luggage packing checklists based on destination climate.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Weather API</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shahanwajkhan/Weather-Packing-Planner" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>GitHub</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                            <a href="https://weather-packing-planner-wine.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>Live Demo</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 8: AI Tutor Hub Chatbot -->
+                    <div class="project-card-secondary extra-project-card" data-reveal="fade-up">
+                        <span class="project-card-secondary-num font-cormorant italic">08 / 12</span>
+                        <h4 class="project-card-secondary-title font-bebas">AI Tutor Hub Chatbot</h4>
+                        <p class="project-card-secondary-desc">
+                            An intelligent tutoring chatbot helper. Enables students to ask academic questions, get contextual feedback, and practice custom quizzes using a chat-style interface.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shahanwajkhan/AI-Tutor-Hub-Chatbot" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>GitHub</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                            <a href="https://github.com/shahanwajkhan/AI-Tutor-Hub-Chatbot" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>GitHub Link</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 9: Traffic Management System -->
+                    <div class="project-card-secondary extra-project-card" data-reveal="fade-up">
+                        <span class="project-card-secondary-num font-cormorant italic">09 / 12</span>
+                        <h4 class="project-card-secondary-title font-bebas">Traffic Management System</h4>
+                        <p class="project-card-secondary-desc">
+                            A real-time traffic flow control and analytics monitoring dashboard designed to help optimize city route congestion and track public transit traffic trends.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">phpMyAdmin</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shahanwajkhan/Traffic-Management-System" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>GitHub</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                            <a href="https://traffic-lime-rho.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>Live Demo</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 10: AI Flashcard Generator -->
+                    <div class="project-card-secondary extra-project-card" data-reveal="fade-up">
+                        <span class="project-card-secondary-num font-cormorant italic">10 / 12</span>
+                        <h4 class="project-card-secondary-title font-bebas">AI Flashcard Generator</h4>
+                        <p class="project-card-secondary-desc">
+                            A study flashcard deck generator using AI integrations to parse textbook files, generating key concept flashcards and review quizzes.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shahanwajkhan/AI-Flashcard-Generator" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>GitHub</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                            <a href="https://github.com/shahanwajkhan/AI-Flashcard-Generator" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>GitHub Link</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 11: Dev Orbit -->
+                    <div class="project-card-secondary extra-project-card" data-reveal="fade-up">
+                        <span class="project-card-secondary-num font-cormorant italic">11 / 12</span>
+                        <h4 class="project-card-secondary-title font-bebas">Dev Orbit Hub</h4>
+                        <p class="project-card-secondary-desc">
+                            A productivity hub for developers offering integrated calculators, task trackers, notes templates, design references, and real-time utilities.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">HTML5</span>
+                            <span class="tech-tag">CSS3</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">Gemini API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shahanwajkhan/Dev_Orbit" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>GitHub</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                            <a href="https://dev-orbit-drab.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>Live Demo</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Project Item 12: Student Report Card System -->
+                    <div class="project-card-secondary extra-project-card" data-reveal="fade-up">
+                        <span class="project-card-secondary-num font-cormorant italic">12 / 12</span>
+                        <h4 class="project-card-secondary-title font-bebas">Report Card Generator</h4>
+                        <p class="project-card-secondary-desc">
+                            An academic report system featuring student data entry, performance average calculators, status checking, and file reading/writing backups.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">C++</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/shahanwajkhan/Student-Report-Card-System" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>GitHub</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                            <a href="https://student-report-card-system.vercel.app" target="_blank" rel="noopener noreferrer" class="btn-project-link cursor-hover">
+                                <span>Live Demo</span>
+                                <svg class="svg-link-arrow" viewBox="0 0 24 24"><path d="M6 19L19 6m0 0H9m10 0v10"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- View More Projects Toggle Button -->
+                <div class="notable-projects-toggle-wrap" data-reveal="fade-up">
+                    <button type="button" class="btn-toggle-notable-projects cursor-hover" id="toggleNotableBtn">
+                        <span id="toggleNotableText">View More Projects</span>
+                        <svg class="svg-toggle-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </button>
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- Certifications Section (04) -->
+        <section class="certifications-section" id="certifications">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-number font-cormorant italic">04 / CERTIFICATIONS</span>
+                    <h2 class="section-heading font-bebas">VERIFIED <span class="font-cormorant italic low-case">credentials.</span></h2>
+                </div>
+
+                <!-- Certifications Grid / Horizontal Scroll Layout -->
+                <div class="certifications-grid">
+                    <!-- Cert 1 -->
+                    <div class="cert-card" data-reveal="fade-up">
+                        <div class="cert-icon-wrapper" aria-hidden="true">
+                            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                        </div>
+                        <div class="cert-details">
+                            <p class="cert-issuer">Oracle <span class="cert-date-divider">•</span> <span class="cert-date">Issued 2026</span></p>
+                            <h3 class="cert-title">Oracle Data Platform 2025 Certified Foundations Associate</h3>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1rbPglhr1CfCjTdWrdIxBt-EJbH_5ScOo/view" target="_blank" rel="noopener noreferrer" class="btn-cert-link cursor-hover">
+                            <span>View Credential</span>
+                            <svg class="svg-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Cert 2 -->
+                    <div class="cert-card" data-reveal="fade-up" data-delay="100">
+                        <div class="cert-icon-wrapper" aria-hidden="true">
+                            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"/></svg>
+                        </div>
+                        <div class="cert-details">
+                            <p class="cert-issuer">AWS <span class="cert-date-divider">•</span> <span class="cert-date">Issued 2026</span></p>
+                            <h3 class="cert-title">AWS SimuLearn: Cloud Computing Essentials</h3>
+                        </div>
+                        <a href="https://drive.google.com/file/d/1pGliEkc3ymui42P8obcun8qKddzkptLU/view" target="_blank" rel="noopener noreferrer" class="btn-cert-link cursor-hover">
+                            <span>View Credential</span>
+                            <svg class="svg-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Cert 3 -->
+                    <div class="cert-card" data-reveal="fade-up" data-delay="200">
+                        <div class="cert-icon-wrapper" aria-hidden="true">
+                            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                        </div>
+                        <div class="cert-details">
+                            <p class="cert-issuer">Cisco Networking Academy <span class="cert-date-divider">•</span> <span class="cert-date">Issued 2025</span></p>
+                            <h3 class="cert-title">Python Essentials</h3>
+                        </div>
+                        <a href="https://drive.google.com/file/d/16hDUmdobcIUhobrl0Qw7r5oscY3Mh9lV/view" target="_blank" rel="noopener noreferrer" class="btn-cert-link cursor-hover">
+                            <span>View Credential</span>
+                            <svg class="svg-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Cert 4 -->
+                    <div class="cert-card" data-reveal="fade-up" data-delay="300">
+                        <div class="cert-icon-wrapper" aria-hidden="true">
+                            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(30 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(90 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4.5" transform="rotate(150 12 12)"/></svg>
+                        </div>
+                        <div class="cert-details">
+                            <p class="cert-issuer">thingQbator & Nasscom Foundation <span class="cert-date-divider">•</span> <span class="cert-date">Issued 2025</span></p>
+                            <h3 class="cert-title">Full Stack Development with MERN</h3>
+                        </div>
+                        <a href="https://thingqbator.s3.ap-south-1.amazonaws.com/1766762590805_ShahanwajKhan_Course-Excellence.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0&view=Fit" target="_blank" rel="noopener noreferrer" class="btn-cert-link cursor-hover">
+                            <span>View Credential</span>
+                            <svg class="svg-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Cert 5 -->
+                    <div class="cert-card" data-reveal="fade-up" data-delay="400">
+                        <div class="cert-icon-wrapper" aria-hidden="true">
+                            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M12 2v4M12 6H8m4 0h4M5 16h-.01M19 16h-.01"/></svg>
+                        </div>
+                        <div class="cert-details">
+                            <p class="cert-issuer">Infosys Springboard <span class="cert-date-divider">•</span> <span class="cert-date">Issued 2025</span></p>
+                            <h3 class="cert-title">ChatGPT-4 Prompt Engineering: ChatGPT, Generative AI & LLM</h3>
+                        </div>
+                        <a href="https://infyspringboard.onwingspan.com/public-assets/infosysheadstart/cert/lex_auth_014157693153288192147/1-0a01def3-f80d-4b4b-b4a7-f6f8f327cb62.pdf" target="_blank" rel="noopener noreferrer" class="btn-cert-link cursor-hover">
+                            <span>View Credential</span>
+                            <svg class="svg-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Cert 6 -->
+                    <div class="cert-card" data-reveal="fade-up" data-delay="500">
+                        <div class="cert-icon-wrapper" aria-hidden="true">
+                            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8zM6 1v3M10 1v3M14 1v3"/></svg>
+                        </div>
+                        <div class="cert-details">
+                            <p class="cert-issuer">Iamneo Platform <span class="cert-date-divider">•</span> <span class="cert-date">Issued 2025</span></p>
+                            <h3 class="cert-title">Java Programming</h3>
+                        </div>
+                        <a href="https://drive.google.com/file/d/14UaXUqMebECj_YxmHKv3MDSf3hvEP3ag/view" target="_blank" rel="noopener noreferrer" class="btn-cert-link cursor-hover">
+                            <span>View Credential</span>
+                            <svg class="svg-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+                    </div>
+
+                    <!-- Cert 7 -->
+                    <div class="cert-card" data-reveal="fade-up" data-delay="600">
+                        <div class="cert-icon-wrapper" aria-hidden="true">
+                            <svg class="cert-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                        </div>
+                        <div class="cert-details">
+                            <p class="cert-issuer">thingQbator & Nasscom Foundation <span class="cert-date-divider">•</span> <span class="cert-date">Issued 2025</span></p>
+                            <h3 class="cert-title">Introduction to Docker and Kubernetes</h3>
+                        </div>
+                        <a href="https://thingqbator.s3.ap-south-1.amazonaws.com/1766763484605_ShahanwajKhan_Course-Excellence.pdf#page=1&toolbar=0&navpanes=0&scrollbar=0&view=Fit" target="_blank" rel="noopener noreferrer" class="btn-cert-link cursor-hover">
+                            <span>View Credential</span>
+                            <svg class="svg-arrow-right" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements & Education Section (05) -->
+        <section class="achievements-section" id="achievements">
+            <div class="container">
+                <!-- Section Header -->
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-number font-cormorant italic">05 / ACHIEVEMENTS</span>
+                    <h2 class="section-heading font-bebas">MILESTONES & <span class="font-cormorant italic low-case">accolades.</span></h2>
+                </div>
+
+                <div class="education-achievements-grid">
+                    
+                    <!-- Education Column -->
+                    <div class="edu-column" data-reveal="fade-up">
+                        <h3 class="sub-column-title font-bebas">EDUCATION</h3>
+                        
+                        <!-- College Category -->
+                        <h4 class="timeline-category-title font-bebas">UNDERGRADUATE STUDIES</h4>
+                        <div class="edu-timeline" style="margin-bottom: 2rem;">
+                            <div class="edu-item">
+                                <span class="edu-duration">2023 - Present</span>
+                                <h4 class="edu-degree font-cormorant italic">Bachelor of Technology in Computer Science & Engineering</h4>
+                                <p class="edu-inst">Lovely Professional University</p>
+                                <div class="edu-coursework">
+                                    <h5 class="coursework-title">Relevant Coursework:</h5>
+                                    <ul class="course-list">
+                                        <li>Data Structures and Algorithms</li>
+                                        <li>Database Management Systems</li>
+                                        <li>Operating Systems</li>
+                                        <li>Computer Networks</li>
+                                        <li>Object-Oriented Programming</li>
+                                        <li>Web Development</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- School Category -->
+                        <h4 class="timeline-category-title font-bebas">SCHOOLING & PRE-UNIVERSITY</h4>
+                        <div class="edu-timeline">
+                            <div class="edu-item">
+                                <span class="edu-duration">2021 - 2023</span>
+                                <h4 class="edu-degree font-cormorant italic">Senior Secondary Education (Class XII - Science)</h4>
+                                <p class="edu-inst">St. Xavier's Public School, Gorakhpur, UP</p>
+                                <div class="edu-coursework">
+                                    <h5 class="coursework-title">Focus Areas:</h5>
+                                    <ul class="course-list">
+                                        <li>Physics, Chemistry & Higher Mathematics</li>
+                                        <li>Computer Science & Algorithmic Logic</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="edu-item">
+                                <span class="edu-duration">2019 - 2021</span>
+                                <h4 class="edu-degree font-cormorant italic">Secondary School Certificate (Class X)</h4>
+                                <p class="edu-inst">Smart Move Academy, Gopalganj, Bihar</p>
+                                <div class="edu-coursework">
+                                    <h5 class="coursework-title">Highlights:</h5>
+                                    <ul class="course-list">
+                                        <li>Science, Mathematics & Information Technology</li>
+                                        <li>Academic Excellence & STEM Activities</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Achievements Column -->
+                    <div class="ach-column" data-reveal="fade-up" data-delay="100">
+                        <h3 class="sub-column-title font-bebas">KEY ACHIEVEMENTS</h3>
+                        
+                        <!-- College Category -->
+                        <h4 class="timeline-category-title font-bebas">COLLEGE ACHIEVEMENTS</h4>
+                        <div class="ach-timeline college-achievements" style="margin-bottom: 2rem;">
+                            <!-- Ach 1 -->
+                            <div class="ach-item">
+                                <span class="ach-year">2026</span>
+                                <div class="ach-content">
+                                    <h4 class="ach-title">Code-Of-Duty Hackathon Runner-up</h4>
+                                    <p class="ach-desc">Built an AI-powered smart parking optimization system.</p>
+                                </div>
+                            </div>
+                            <!-- Ach 2 -->
+                            <div class="ach-item">
+                                <span class="ach-year">2025</span>
+                                <div class="ach-content">
+                                    <h4 class="ach-title">LPU CodeWars Runner-up</h4>
+                                    <p class="ach-desc">Secured 2nd rank among 300+ participants in algorithmic coding.</p>
+                                </div>
+                            </div>
+                            <!-- Ach 3 -->
+                            <div class="ach-item">
+                                <span class="ach-year">2024</span>
+                                <div class="ach-content">
+                                    <h4 class="ach-title">Open Source & Competitive Coding</h4>
+                                    <p class="ach-desc">Contributed to open source projects and solved 150+ coding problems.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- School Category -->
+                        <h4 class="timeline-category-title font-bebas">SCHOOL ACHIEVEMENTS</h4>
+                        <div class="ach-timeline school-achievements">
+                            <!-- Ach 4 -->
+                            <div class="ach-item">
+                                <span class="ach-year">2023</span>
+                                <div class="ach-content">
+                                    <h4 class="ach-title">School Cricket Captain</h4>
+                                    <p class="ach-desc">Led the high school cricket team in inter-school tournaments and sports events.</p>
+                                </div>
+                            </div>
+                            <!-- Ach 5 -->
+                            <div class="ach-item">
+                                <span class="ach-year">2022</span>
+                                <div class="ach-content">
+                                    <h4 class="ach-title">District Cricket Champion</h4>
+                                    <p class="ach-desc">Won 1st place in the district inter-school cricket tournament.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section (06) -->
+        <section class="contact-section" id="contact">
+            <!-- Background overlays -->
+            <div class="desk-wood-grain"></div>
+            <div class="desk-lighting" id="deskLighting"></div>
+            <div class="desk-sunlight"></div>
+            <div class="desk-vignette"></div>
+            <div class="dust-particles" id="dustParticles"></div>
+
+            <div class="desk-scene-container">
+                <!-- Section Header -->
+                <div class="section-header" data-reveal="fade-up">
+                    <span class="section-number font-cormorant italic">06 / CONTACT</span>
+                    <h2 class="section-heading font-bebas">LET'S BUILD<br>SOMETHING<br>INCREDIBLE.</h2>
+                    <p class="section-subtitle font-cormorant italic">Every great project starts with a simple idea.</p>
+                </div>
+
+                <!-- Desk Workspace Layer -->
+                <div class="desk-workspace" id="deskWorkspace">
+                    
+                    <!-- SVG Desk Lamp (Day/Night toggler + shadow reference) -->
+                    <div class="desk-lamp" id="deskLamp" role="button" aria-label="Toggle Night Mode" tabindex="0">
+                        <svg viewBox="0 0 100 200" class="lamp-svg">
+                            <!-- Lamp Base -->
+                            <path d="M20,180 C20,165 80,165 80,180 Z" fill="#222222" stroke="#111111" stroke-width="2"/>
+                            <!-- Arm -->
+                            <path d="M50,170 Q30,120 60,60" fill="none" stroke="#444444" stroke-width="8" stroke-linecap="round"/>
+                            <!-- Joints -->
+                            <circle cx="50" cy="170" r="6" fill="#ff8a50"/>
+                            <circle cx="43" cy="115" r="5" fill="#ff8a50"/>
+                            <!-- Shade -->
+                            <path class="lamp-shade" d="M35,60 C35,25 85,25 85,60 C85,60 90,65 80,75 C70,85 45,85 35,60 Z" fill="#E65F2C" stroke="#111111" stroke-width="2"/>
+                            <!-- Bulb -->
+                            <circle class="lamp-bulb" cx="60" cy="72" r="10" fill="#ffffff"/>
+                        </svg>
+                        <div class="lamp-beam" id="lampBeam"></div>
+                    </div>
+
+                    <!-- SVG Desk Plant (Leaf sway interaction) -->
+                    <div class="desk-plant" id="deskPlant">
+                        <svg viewBox="0 0 120 120" class="plant-svg">
+                            <!-- Pot shadow -->
+                            <ellipse cx="60" cy="110" rx="32" ry="8" fill="rgba(0,0,0,0.15)"/>
+                            <!-- Pot -->
+                            <path d="M35,80 L85,80 L95,115 L25,115 Z" fill="#a0522d" stroke="#111111" stroke-width="2"/>
+                            <!-- Leaf 1 -->
+                            <path class="plant-leaf" id="leaf1" d="M60,80 C40,55 30,25 50,5 C62,25 62,55 60,80 Z" fill="#2d6a4f" stroke="#111111" stroke-width="1.5"/>
+                            <!-- Leaf 2 -->
+                            <path class="plant-leaf" id="leaf2" d="M60,80 C80,55 90,25 70,5 C58,25 58,55 60,80 Z" fill="#40916c" stroke="#111111" stroke-width="1.5"/>
+                            <!-- Leaf 3 -->
+                            <path class="plant-leaf" id="leaf3" d="M60,80 C45,55 15,45 25,25 C45,40 50,60 60,80 Z" fill="#52b788" stroke="#111111" stroke-width="1.5"/>
+                            <!-- Leaf 4 -->
+                            <path class="plant-leaf" id="leaf4" d="M60,80 C75,55 105,45 95,25 C75,40 70,60 60,80 Z" fill="#1b4332" stroke="#111111" stroke-width="1.5"/>
+                        </svg>
+                    </div>
+
+                    <!-- SVG Coffee Cup (Steam loops + Clickable stain generator) -->
+                    <div class="desk-coffee" id="deskCoffee" role="button" aria-label="Take a sip of coffee" tabindex="0">
+                        <div class="coffee-steam-wrap">
+                            <svg viewBox="0 0 40 40" class="steam-svg">
+                                <path class="steam-line steam-1" d="M10,35 Q15,20 10,5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="2 2"/>
+                                <path class="steam-line steam-2" d="M20,35 Q25,20 20,5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="2 2"/>
+                                <path class="steam-line steam-3" d="M30,35 Q35,20 30,5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" stroke-dasharray="2 2"/>
+                            </svg>
+                        </div>
+                        <svg viewBox="0 0 100 100" class="coffee-svg">
+                            <!-- Cup Shadow -->
+                            <ellipse cx="50" cy="54" rx="42" ry="42" fill="rgba(0,0,0,0.12)"/>
+                            <!-- Handle -->
+                            <path d="M72,35 C88,35 88,65 72,65" fill="none" stroke="#e3dbce" stroke-width="8" stroke-linecap="round"/>
+                            <!-- Cup Body -->
+                            <ellipse cx="45" cy="50" rx="32" ry="32" fill="#faf6f0" stroke="#cccccc" stroke-width="1.5"/>
+                            <!-- Coffee liquid -->
+                            <ellipse cx="45" cy="50" rx="27" ry="27" fill="#4E3629"/>
+                            <ellipse cx="45" cy="50" rx="23" ry="23" fill="#3D2B1F"/>
+                            <ellipse cx="52" cy="42" rx="4" ry="2" fill="rgba(255,255,255,0.15)"/>
+                        </svg>
+                    </div>
+
+                    <!-- Glasses Decoration -->
+                    <div class="desk-glasses" id="deskGlasses">
+                        <svg viewBox="0 0 100 45" class="glasses-svg">
+                            <!-- Left Frame -->
+                            <circle cx="28" cy="22" r="16" fill="none" stroke="#222222" stroke-width="3"/>
+                            <circle cx="28" cy="22" r="15" fill="rgba(255,255,255,0.05)"/>
+                            <!-- Right Frame -->
+                            <circle cx="72" cy="22" r="16" fill="none" stroke="#222222" stroke-width="3"/>
+                            <circle cx="72" cy="22" r="15" fill="rgba(255,255,255,0.05)"/>
+                            <!-- Bridge -->
+                            <path d="M44,20 C47,16 53,16 56,20" fill="none" stroke="#222222" stroke-width="3"/>
+                            <!-- Sides -->
+                            <path d="M12,22 L2,20 C0,12 5,5 2,2" fill="none" stroke="#222222" stroke-width="2"/>
+                            <path d="M88,22 L98,20 C100,12 95,5 98,2" fill="none" stroke="#222222" stroke-width="2"/>
+                        </svg>
+                    </div>
+
+                    <!-- Keyboard Corner & Paper Clips Decoration -->
+                    <div class="desk-keyboard-corner"></div>
+                    <div class="desk-paperclips">
+                        <div class="paperclip clip-1"></div>
+                        <div class="paperclip clip-2"></div>
+                    </div>
+
+                    <!-- Pencil Stylus follower graphic -->
+                    <div class="pencil-stylus" id="pencilStylus">
+                        <svg viewBox="0 0 24 120" class="pencil-svg">
+                            <path d="M4,10 L20,10 L20,95 C20,95 20,105 12,118 C4,105 4,95 4,95 Z" fill="#d2b48c" stroke="#111111" stroke-width="1.5"/>
+                            <path d="M4,10 L20,10 L20,80 L4,80 Z" fill="#E65F2C" stroke="#111111" stroke-width="1.5"/> <!-- Paint -->
+                            <rect x="4" y="0" width="16" height="10" fill="#ffb3ba" stroke="#111111" stroke-width="1.5"/> <!-- Eraser -->
+                            <rect x="4" y="10" width="16" height="4" fill="#a8a8a8" stroke="#111111" stroke-width="1.5"/> <!-- Band -->
+                            <path class="pencil-lead" id="pencilTipColor" d="M12,118 L9,112 L15,112 Z" fill="#111111"/> <!-- Tip -->
+                        </svg>
+                    </div>
+
+                    <!-- MAIN ATTRACTION: THE NOTEBOOK -->
+                    <div class="sketch-notebook" id="sketchNotebook">
+                        <div class="notebook-spine"></div>
+                        
+                        <!-- Notebook Paper Tear/Folding Overlay Animation Wrapper -->
+                        <div class="notebook-tear-page" id="notebookTearPage"></div>
+
+                        <!-- Left Page: Sketching Canvas -->
+                        <div class="notebook-page page-left">
+                            <div class="page-margin-line"></div>
+                            <div class="sketch-pad-header">
+                                <span class="sketch-pad-title">Sketch your idea...</span>
+                                <div class="sketch-pad-controls">
+                                    <button type="button" class="ctrl-btn active" id="btnBrush" title="Brush">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 14.7255 3.09032 17.1962 4.85857 19M12 22V12M12 12H2M12 12L5 5"/></svg>
+                                    </button>
+                                    <button type="button" class="ctrl-btn" id="btnEraser" title="Eraser">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 20H4M20 14l-5-5L9.7 14.3a1 1 0 0 0 0 1.4L13.3 19.3a1 1 0 0 0 1.4 0L20 14z"/></svg>
+                                    </button>
+                                    
+                                    <div class="color-palette">
+                                        <button type="button" class="color-swatch active" style="background-color: #111111;" data-color="#111111"></button>
+                                        <button type="button" class="color-swatch" style="background-color: #E65F2C;" data-color="#E65F2C"></button>
+                                        <button type="button" class="color-swatch" style="background-color: #3B82F6;" data-color="#3B82F6"></button>
+                                        <button type="button" class="color-swatch" style="background-color: #8B5CF6;" data-color="#8B5CF6"></button>
+                                    </div>
+                                    
+                                    <div class="brush-size-wrap">
+                                        <input type="range" id="brushSize" min="2" max="20" value="4" class="size-slider cursor-hover">
+                                    </div>
+
+                                    <button type="button" class="ctrl-btn" id="btnUndo" title="Undo">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7v6h6M21 17a9 9 0 0 0-9-9 9 9 0 0 0-6 2.3L3 13"/></svg>
+                                    </button>
+                                    <button type="button" class="ctrl-btn" id="btnRedo" title="Redo">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 7v6h-6M3 17a9 9 0 0 1 9-9 9 9 0 0 1 6 2.3l3 2.7"/></svg>
+                                    </button>
+                                    <button type="button" class="ctrl-btn" id="btnClear" title="Clear Canvas">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 7l-.867 12.142A2 2 0 0 1 16.138 21H7.862a2 2 0 0 1-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1v3M4 7h16"/></svg>
+                                    </button>
+                                    <button type="button" class="ctrl-btn" id="btnSave" title="Save Sketch">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/></svg>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="canvas-container">
+                                <canvas id="sketchCanvas"></canvas>
+                            </div>
+                        </div>
+
+                        <!-- Right Page: Handwritten Note Form -->
+                        <div class="notebook-page page-right">
+                            <div class="page-margin-line"></div>
+                            <form id="sketchContactForm" class="notebook-form" novalidate>
+                                <input type="hidden" name="access_key" value="a91e4c14-b0cb-43b1-84c1-d5e4a8a7c451">
+                                <div class="ruled-form-lines">
+                                    <div class="ruled-line sketch-group">
+                                        <label for="sketchName" class="ruled-label">Dear Shahanwaj, my name is</label>
+                                        <input type="text" id="sketchName" name="name" class="ruled-input cursor-hover" placeholder="Your Name" required>
+                                        <span class="sketch-error" id="sketchNameError">Name required</span>
+                                    </div>
+                                    <div class="ruled-line sketch-group">
+                                        <label for="sketchEmail" class="ruled-label">reach me at</label>
+                                        <input type="email" id="sketchEmail" name="email" class="ruled-input cursor-hover" placeholder="Email Address" required>
+                                        <span class="sketch-error" id="sketchEmailError">Valid Email required</span>
+                                    </div>
+                                    <div class="ruled-line sketch-group">
+                                        <label for="sketchCompany" class="ruled-label">I represent</label>
+                                        <input type="text" id="sketchCompany" name="company" class="ruled-input cursor-hover" placeholder="Company Name (Optional)">
+                                    </div>
+                                    <div class="ruled-line inline-picks">
+                                        <span class="ruled-label">I want to build a</span>
+                                        <select id="sketchProject" name="project" class="ruled-select cursor-hover">
+                                            <option value="Web App">Web Application</option>
+                                            <option value="Mobile App">Mobile Application</option>
+                                            <option value="Design/UI">UX/UI Redesign</option>
+                                            <option value="AI Integration">Generative AI Integration</option>
+                                        </select>
+                                        <span class="ruled-label">project.</span>
+                                    </div>
+                                    <div class="ruled-line inline-picks">
+                                        <span class="ruled-label">Our budget is</span>
+                                        <select id="sketchBudget" name="budget" class="ruled-select cursor-hover">
+                                            <option value="Low">&lt; $5k</option>
+                                            <option value="Medium">$5k - $15k</option>
+                                            <option value="High">$15k - $50k</option>
+                                            <option value="Enterprise">$50k+</option>
+                                        </select>
+                                        <span class="ruled-label">in a timeline of</span>
+                                        <select id="sketchTimeline" name="timeline" class="ruled-select cursor-hover">
+                                            <option value="1 month">1 Month</option>
+                                            <option value="2-3 months">2-3 Months</option>
+                                            <option value="3-6 months">3-6 Months</option>
+                                            <option value="Long Term">Flexible</option>
+                                        </select>
+                                    </div>
+                                    <div class="ruled-message-block sketch-group">
+                                        <label for="sketchMessage" class="ruled-label-block">Here is my idea:</label>
+                                        <textarea id="sketchMessage" name="message" class="ruled-textarea cursor-hover" placeholder="Let's make something amazing together..." required></textarea>
+                                        <span class="sketch-error" id="sketchMessageError">Message required</span>
+                                    </div>
+                                </div>
+                                 <div class="sketch-form-feedback" id="sketchFormFeedback" role="alert"></div>
+                            </form>
+                            <!-- Send button outside form so it's always visible -->
+                            <div class="submit-desk-row">
+                                <button type="submit" form="sketchContactForm" class="btn-desk-send cursor-hover" id="sketchSubmitBtn" style="cursor: pointer !important; position: relative; z-index: 200;">
+                                    <span>Send Idea</span>
+                                    <svg viewBox="0 0 24 24" class="send-plane-svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success overlay (Paper plane flown away) -->
+                    <div class="sketch-success-container" id="sketchSuccessMsg">
+                        <div class="success-content">
+                            <div class="success-plane-sparkle"></div>
+                            <h3 class="success-title font-bebas">✓ Your idea has landed in my inbox.</h3>
+                            <p class="success-desc font-cormorant italic">I'll get back to you soon.</p>
+                            <button type="button" class="btn-reset-pad cursor-hover" id="btnResetPad">Leave Another Mark</button>
+                        </div>
+                    </div>
+
+                    <!-- DRAGGABLE STICKY NOTES -->
+                    <div class="desk-sticky-notes">
+                        <div class="draggable-sticky note-yellow" style="top: 40px; right: 280px; transform: rotate(-4deg);" tabindex="0">
+                            <span class="sticky-pin">📌</span>
+                            <p class="sticky-text font-cormorant italic">AI Projects</p>
+                        </div>
+                        <div class="draggable-sticky note-blue" style="top: 180px; right: 340px; transform: rotate(3deg);" tabindex="0">
+                            <span class="sticky-pin">📌</span>
+                            <p class="sticky-text font-cormorant italic">Full Stack</p>
+                        </div>
+                        <div class="draggable-sticky note-pink" style="top: 310px; right: 250px; transform: rotate(-5deg);" tabindex="0">
+                            <span class="sticky-pin">📌</span>
+                            <p class="sticky-text font-cormorant italic">Open to Work</p>
+                        </div>
+                        <div class="draggable-sticky note-green" style="bottom: 120px; left: 180px; transform: rotate(2deg);" tabindex="0">
+                            <span class="sticky-pin">📌</span>
+                            <p class="sticky-text font-cormorant italic">React & Django</p>
+                        </div>
+                        <div class="draggable-sticky note-orange" style="bottom: 40px; left: 320px; transform: rotate(-2deg);" tabindex="0">
+                            <span class="sticky-pin">📌</span>
+                            <p class="sticky-text font-cormorant italic">LPU</p>
+                        </div>
+                    </div>
+
+                    <!-- INTERACTIVE GITHUB CARD (3D Flipping) -->
+                    <div class="desk-card-github" id="githubCard" tabindex="0">
+                        <div class="card-inner">
+                            <div class="card-front">
+                                <span class="card-brand">GitHub</span>
+                                <span class="card-handle">@shahanwajkhan</span>
+                                <div class="card-graph-preview">
+                                    <span></span><span></span><span></span><span></span><span></span>
+                                </div>
+                            </div>
+                            <div class="card-back">
+                                <!-- SVG QR Code representing repository link -->
+                                <svg viewBox="0 0 100 100" class="qr-svg">
+                                    <rect x="10" y="10" width="80" height="80" fill="none" stroke="#222" stroke-width="2"/>
+                                    <!-- QR patterns -->
+                                    <rect x="15" y="15" width="20" height="20" fill="#222"/>
+                                    <rect x="20" y="20" width="10" height="10" fill="#fff"/>
+                                    <rect x="65" y="15" width="20" height="20" fill="#222"/>
+                                    <rect x="70" y="20" width="10" height="10" fill="#fff"/>
+                                    <rect x="15" y="65" width="20" height="20" fill="#222"/>
+                                    <rect x="20" y="70" width="10" height="10" fill="#fff"/>
+                                    <rect x="45" y="45" width="10" height="10" fill="#222"/>
+                                    <rect x="55" y="55" width="15" height="15" fill="#222"/>
+                                </svg>
+                                <a href="https://github.com/shahanwajkhan" target="_blank" rel="noopener noreferrer" class="card-back-link">Open Profile</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- INTERACTIVE LINKEDIN CARD -->
+                    <div class="desk-card-linkedin" id="linkedinCard">
+                        <span class="card-pin" id="linkedinPin">📌</span>
+                        <div class="linkedin-card-content">
+                            <span class="linkedin-brand">LinkedIn</span>
+                            <a href="https://www.linkedin.com/in/skhan234/" target="_blank" rel="noopener noreferrer" class="linkedin-connect cursor-hover">Connect With Me</a>
+                        </div>
+                    </div>
+
+                    <!-- FOLDED PAPER RESUME -->
+                    <div class="desk-resume" id="deskResume">
+                        <div class="resume-corner-fold"></div>
+                        <div class="resume-paper-body">
+                            <span class="resume-icon">📄</span>
+                            <h4 class="resume-title font-bebas">RESUME.PDF</h4>
+                            <p class="resume-hint font-cormorant italic">Shahanwaj Khan</p>
+                            <a href="assets/resume.pdf" download="Shahanwaj_Khan_Resume.pdf" class="resume-download-btn cursor-hover">Download PDF</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-top">
+                <!-- Column 1: Info -->
+                <div class="footer-col footer-info">
+                    <a href="#home" class="footer-logo font-cormorant cursor-hover"><span class="logo-accent">&lt;</span> Shahanwaj <span class="logo-accent">/&gt;</span></a>
+                    <h4 class="footer-subheading">Full Stack Developer building intelligent web applications.</h4>
+                    <p class="footer-description">Turning ideas into scalable digital solutions. Passionate about clean code, modern design, and creating impactful user experiences.</p>
+                </div>
+
+                <!-- Column 2: Nav -->
+                <div class="footer-col footer-nav">
+                    <h4 class="footer-col-title font-bebas">Quick Navigation</h4>
+                    <div class="footer-nav-grid">
+                        <div class="footer-nav-col">
+                            <a href="#about" class="footer-nav-link cursor-hover">About</a>
+                            <a href="#education" class="footer-nav-link cursor-hover">Education</a>
+                            <a href="#projects" class="footer-nav-link cursor-hover">Projects</a>
+                            <a href="#achievements" class="footer-nav-link cursor-hover">Achievements</a>
+                        </div>
+                        <div class="footer-nav-col">
+                            <a href="#skills" class="footer-nav-link cursor-hover">Skills</a>
+                            <a href="#experience" class="footer-nav-link cursor-hover">Experience</a>
+                            <a href="#certifications" class="footer-nav-link cursor-hover">Certifications</a>
+                            <a href="#contact" class="footer-nav-link cursor-hover">Contact</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Column 3: Connect -->
+                <div class="footer-col footer-connect">
+                    <h4 class="footer-col-title font-bebas">Connect With Me</h4>
+                    <div class="footer-socials">
+                        <a href="https://www.linkedin.com/in/skhan234/" target="_blank" rel="noopener noreferrer" class="footer-social-link cursor-hover">
+                            <span class="social-text">LinkedIn</span>
+                            <div class="social-icon-wrapper">
+                                <svg class="social-icon" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z"/></svg>
+                            </div>
+                        </a>
+                        <a href="https://github.com/shahanwajkhan" target="_blank" rel="noopener noreferrer" class="footer-social-link cursor-hover">
+                            <span class="social-text">GitHub</span>
+                            <div class="social-icon-wrapper">
+                                <svg class="social-icon" viewBox="0 0 24 24"><path d="M12 2A10 10 0 0 0 2 12c0 4.42 2.87 8.17 6.84 9.5.5.08.66-.23.66-.5v-1.69c-2.77.6-3.36-1.34-3.36-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.07 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.92 0-1.11.38-2 1.03-2.71-.1-.25-.45-1.29.1-2.64 0 0 .84-.27 2.75 1.02.79-.22 1.65-.33 2.5-.33.85 0 1.71.11 2.5.33 1.91-1.29 2.75-1.02 2.75-1.02.55 1.35.2 2.39.1 2.64.65.71 1.03 1.6 1.03 2.71 0 3.82-2.34 4.66-4.57 4.91.36.31.69.92.69 1.85V21c0 .27.16.59.67.5C19.14 20.16 22 16.42 22 12A10 10 0 0 0 12 2z"/></svg>
+                            </div>
+                        </a>
+                        <a href="mailto:shahanwajk581@gmail.com" class="footer-social-link cursor-hover">
+                            <span class="social-text">Email</span>
+                            <div class="social-icon-wrapper">
+                                <svg class="social-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider" />
+            
+            <div class="footer-bottom">
+                <p class="copyright">&copy; <span id="currentYear"></span> Shahanwaj Khan &mdash; Built with passion and &lt;&gt; code.</p>
+                
+                <button class="btn-back-to-top btn-magnetic cursor-hover" id="backToTopBtn" aria-label="Back to top">
+                    <svg class="svg-arrow-up" viewBox="0 0 24 24"><path d="M4 12l1.41 1.41L11 7.83V20h2V7.83l5.58 5.59L20 12l-8-8-8 8z"/></svg>
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
